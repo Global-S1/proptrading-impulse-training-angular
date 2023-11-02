@@ -5,9 +5,10 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
 import { RecoveryPasswordComponent } from './recovery-password/recovery-password.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
-  declarations: [AuthComponent, FooterComponent, LoginComponent, RecoveryPasswordComponent],
+  declarations: [AuthComponent, FooterComponent, LoginComponent, RecoveryPasswordComponent, ChangePasswordComponent],
   imports: [
     CommonModule,
     CoreModule

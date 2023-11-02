@@ -27,6 +27,17 @@ app-root {
 }
 
 app-auth {
+
+  span,
+  p,
+  a {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin: 3px 0;
+  }
+
   app-login {
     a,
     span {
@@ -98,16 +109,6 @@ app-auth {
     );
     color: #fff;
 
-    span,
-    p,
-    a {
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 140%;
-      margin: 3px 0;
-    }
-
     span {
       color: #a0aec0;
       text-align: center;
@@ -119,5 +120,43 @@ app-auth {
       color: white;
       margin-left: 4px;
     }
+  }
+
+  app-change-password {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    place-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    width: 70%;
+    height: 80%;
+    border: 3px solid white;
+    border-radius: 20px;
+
+    >div {
+      display: grid;
+      place-items: center;
+      width: 80%;
+      height: 90%;
+
+      >div:nth-child(4){
+        display: grid;
+        grid-template-columns: 50% 52%;
+        grid-template-rows: 25% 25%;
+        gap: 11px;
+        margin: 18px 0;
+
+        span {
+          color: #a0aec0;
+          font-weight: 400;
+        }
+
+        img {
+          margin-right: 4px;
+        }
+      }
+    }
+
   }
 }
