@@ -14,15 +14,21 @@
 
 <div class="w-50">
   <p>email</p>
-  <input type="text" placeholder="Ingresé su email" class="w-100 text-white"/>
+  <app-input placeholder="Ingresé su email"></app-input>
 </div>
 
 <div class="w-50">
   <p>contraseña</p>
-  <input type="password" placeholder="Ingresé su contraseña" class="w-100 text-white"/>
+  <app-input type="password" placeholder="Ingresé su contraseña"></app-input>
 </div>
 
-<a href="" style="display: block">¿Olvidaste tu contraseña?</a>
+<div class="d-flex justify-content-between align-items-center">
+  <!-- <div>
+    <button>a</button>
+    Recuerdame
+  </div> -->
+  <a href="" >¿Olvidaste tu contraseña?</a>
+</div>
 
-<button class="bg-primary w-50">INICIAR SESIÓN</button>
-<span>¿No tienes cuenta aún?<a href="">Registrate</a></span>
+<app-button text="INICIA SESIÓN" theme="min"></app-button>
+<span>¿No tienes cuenta aún?<a href="">Regístrate</a></span>
