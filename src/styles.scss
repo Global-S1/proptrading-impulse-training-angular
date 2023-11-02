@@ -27,7 +27,6 @@ app-root {
 }
 
 app-auth {
-
   app-login {
     a,
     span {
@@ -76,6 +75,49 @@ app-auth {
     a {
       font-size: 12px;
       color: #a0aec0;
+    }
+  }
+
+  app-recovery-password {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    place-items: center;
+    justify-content: center;
+    padding: 5px 0;
+
+    width: 75%;
+    height: 85%;
+
+    border-radius: 20px;
+    border: 2px solid white;
+    background: linear-gradient(
+      124deg,
+      rgba(255, 255, 255, 0) -22.38%,
+      rgba(255, 255, 255, 0.04) 70.38%
+    );
+    color: #fff;
+
+    span,
+    p,
+    a {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+      margin: 3px 0;
+    }
+
+    span {
+      color: #a0aec0;
+      text-align: center;
+    }
+
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      margin-left: 4px;
     }
   }
 }
