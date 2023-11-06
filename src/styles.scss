@@ -159,4 +159,34 @@ app-auth {
     }
 
   }
+
+  app-response-success {
+    display: grid;
+    place-items: center;
+    height: 90%;
+
+    >div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      width: 60%;
+      height: 90%;
+
+      border: 3px solid white;
+      border-radius: 12px;
+
+      >div {
+        padding: 0 35px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+    }
+  }
 }
