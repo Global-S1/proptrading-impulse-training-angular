@@ -1,13 +1,8 @@
-export type IOptionThemeBtn =  "min" | "default"
-
-// "raised" | "stroked" | "icon" | "fab" | "minifab" |
+export type IOptionThemeBtn =  "min" | "page" |"default" | "pageAnalyzer"
 
 export interface IThemeBtn {
-  // raised: string
-  // stroked: string
-  // icon: string
-  // fab: string,
-  // minifab: string,
-  default: string,
-  min: string
+  min: string,
+  page: string,
+  pageAnalyzer: string,
+  default: string
 }

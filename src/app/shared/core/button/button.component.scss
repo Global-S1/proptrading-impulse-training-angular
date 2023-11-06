@@ -18,3 +18,21 @@ button {
   backdrop-filter: blur(60px);
   outline: none;
 }
+
+.page {
+  width: 326px;
+  height: 45px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.page-analyzer {
+  width: 280px;
+  height: 34px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
