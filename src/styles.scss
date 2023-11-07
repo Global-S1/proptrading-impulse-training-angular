@@ -259,7 +259,7 @@ app-mask {
 
       a {
         margin: 0 5px;
-        color: white
+        color: white;
       }
 
       > div {
@@ -312,7 +312,7 @@ app-mask {
 
         figure {
           display: inline;
-          background: #01B57440;
+          background: #01b57440;
           border-radius: 10px;
 
           width: 118px;
@@ -379,6 +379,81 @@ app-mask {
             }
           }
         }
+      }
+    }
+  }
+
+  app-elevate {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1fr;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      width: 90%;
+
+      background: linear-gradient(
+        127deg,
+        rgba(6, 11, 40, 0.74) 28.26%,
+        rgba(10, 14, 35, 0.71) 91.2%
+      );
+      border: 1px solid #007cff;
+      border-radius: 20px;
+      box-shadow: 0px 4px 12px 0px rgba(0, 124, 255, 0.34);
+      padding: 20px;
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 100%;
+      }
+
+      .photo-user {
+        width: 50%;
+
+        img {
+          width: 102.366px;
+        }
+
+        figure {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          width: 259.937px;
+          height: 242.449px;
+
+          position: relative;
+          overflow: hidden;
+
+          border-radius: 259.937px;
+          border: 1px solid #007cff;
+          background: #0f1535;
+          box-shadow: 0px 0px 4px 0px #007cff;
+        }
+      }
+
+      .data-user {
+        width: 50%;
+      }
+
+      .condicional {
+        grid-area: condicional;
+        text-align: center;
+      }
+
+      .button {
+        grid-area: button;
       }
     }
   }

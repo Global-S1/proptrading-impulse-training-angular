@@ -9,4 +9,5 @@ export class InputComponent {
 
   @Input() type: string = "text";
   @Input() placeholder: string = "Ingresé su código aquí";
+  @Input() custom!: string
 }
