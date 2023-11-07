@@ -14,6 +14,22 @@ body {
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    background-color: #062b63;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #007cff;
+    border-radius: 8px;
+  }
+
+  &::-webkit-scrollbar-button {
+    background-color: #007cff;
+    height: 0px;
+  }
 }
 
 app-root {
@@ -245,8 +261,7 @@ app-mask {
         width: 80%;
         height: 300px;
 
-        // background: url('./assets/card-border.png');
-        // background-size: cover;
+
         border: 2px solid white;
         border-radius: 12px;
 
