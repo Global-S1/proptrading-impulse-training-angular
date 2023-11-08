@@ -36,6 +36,61 @@ app-root {
   width: 100%;
   height: 100%;
   background: url("./assets/Recurso\ 1\ 1.png");
+
+  app-layout {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 296px;
+    height: 100%;
+
+    background: linear-gradient(
+      179deg,
+      #060e2c 31.88%,
+      rgba(6, 43, 99, 0) 100%
+    );
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+
+    padding: 20px;
+
+    img[alt="logo"] {
+      height: 38px;
+      margin: auto;
+    }
+
+    app-options-layout {
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .circle {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 12px;
+        background: #1A1F37;
+      }
+    }
+
+    .img-head-impulse {
+      display: flex;
+      flex-direction: column;
+      width: 240px;
+
+      .Line {
+        width: 230px;
+        height: 12px;
+      }
+    }
+  }
 }
 
 app-auth {
@@ -213,7 +268,7 @@ app-mask {
   justify-content: center;
   align-items: center;
 
-  width: 100vw;
+  width: 85%;
   height: 100%;
 
   app-challenge {

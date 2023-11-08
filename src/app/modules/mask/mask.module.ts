@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../../shared/common/shared.module';
 import { ChallengeComponent } from '../challenge/challenge.component';
 import { MaskComponent } from './mask.component';
 import { ChallengeCartComponent } from '../challenge/challenge-cart/challenge-cart.component';
@@ -16,7 +17,8 @@ import { OffersComponent } from '../offers/offers.component';
     OffersComponent],
   imports: [
     CommonModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   exports: [MaskComponent, ChallengeComponent,
     ChallengeCartComponent, ElevateComponent, PromotionComponent,
