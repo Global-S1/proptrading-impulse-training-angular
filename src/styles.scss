@@ -576,4 +576,41 @@ app-mask {
       max-width: 1060px;
     }
   }
+
+  app-offers {
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    > div {
+      display: grid;
+      place-items: center;
+
+      width: 90%;
+      height: 201px;
+
+      position: relative;
+      border-radius: 20px;
+      margin: auto;
+
+      > div {
+        display: grid;
+        place-items: center;
+        z-index: 200;
+      }
+
+      img {
+        background-size: cover;
+        border-radius: 20px;
+        filter: blur(15px);
+
+        width: 100%;
+        height: 201px;
+        position: absolute;
+      }
+    }
+  }
 }

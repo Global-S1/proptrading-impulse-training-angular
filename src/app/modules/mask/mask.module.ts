@@ -6,17 +6,20 @@ import { ChallengeCartComponent } from '../challenge/challenge-cart/challenge-ca
 import { CoreModule } from 'src/app/shared/core/core.module';
 import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
+import { OffersComponent } from '../offers/offers.component';
 
 
 
 @NgModule({
   declarations: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent, ElevateComponent, PromotionComponent],
+    ChallengeCartComponent, ElevateComponent, PromotionComponent,
+    OffersComponent],
   imports: [
     CommonModule,
     CoreModule
   ],
   exports: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent, ElevateComponent, PromotionComponent]
+    ChallengeCartComponent, ElevateComponent, PromotionComponent,
+    OffersComponent]
 })
 export class MaskModule { }
