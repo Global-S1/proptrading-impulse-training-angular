@@ -395,9 +395,13 @@ app-mask {
     form {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      width: 85%;
+      max-width: 1132px;
+
       margin: auto;
-      width: 90%;
+      padding: 20px;
 
       background: linear-gradient(
         127deg,
@@ -407,48 +411,123 @@ app-mask {
       border: 1px solid #007cff;
       border-radius: 20px;
       box-shadow: 0px 4px 12px 0px rgba(0, 124, 255, 0.34);
-      padding: 20px;
 
-      .container {
+      @media (max-width: 730px) {
+        background: transparent;
+        border: none;
+        box-shadow: none
+      }
+
+      .containerUser {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
 
         width: 100%;
-      }
+        gap: 0 16px;
 
-      .photo-user {
-        width: 50%;
-
-        img {
-          width: 102.366px;
-        }
-
-        figure {
-          display: flex;
+        @media (max-width: 730px) {
           flex-direction: column;
-          justify-content: center;
           align-items: center;
-
-          width: 259.937px;
-          height: 242.449px;
-
-          position: relative;
-          overflow: hidden;
-
-          border-radius: 259.937px;
-          border: 1px solid #007cff;
-          background: #0f1535;
-          box-shadow: 0px 0px 4px 0px #007cff;
         }
-      }
 
-      .data-user {
-        width: 50%;
+        .photo-user {
+          width: 40%;
+
+
+          img {
+            width: 102.366px;
+          }
+
+          figure {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 259.937px;
+            height: 242.449px;
+
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 259.937px;
+            border: 1px solid #007cff;
+            background: #0f1535;
+            box-shadow: 0px 0px 4px 0px #007cff;
+          }
+        }
+
+        .data-user {
+          width: 60%;
+          margin-left: 2rem;
+
+          display: grid;
+          gap: 40px 0;
+
+          app-input {
+            input {
+              max-width: 400px;
+            }
+          }
+
+          .containerAvatar {
+            display: flex;
+            align-items: center;
+
+            padding-left: 10px;
+            gap: 0 20px;
+
+            width: 100%;
+            height: 90px;
+
+            overflow-y: hidden;
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+              background-color: #062b63;
+              height: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: #007cff;
+              border-radius: 8px;
+            }
+
+            &::-webkit-scrollbar-button {
+              height: 0;
+              width: 0;
+            }
+
+            .avatar {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              background-color: #060b28;
+              border-radius: 50%;
+
+              width: 80px;
+              height: 70px;
+
+              fill: #060b28;
+              stroke: #007cff;
+              filter: drop-shadow(0px 0px 6px #007cff);
+
+              img {
+                width: 70px;
+                height: 60px;
+              }
+            }
+          }
+        }
       }
 
       .condicional {
         grid-area: condicional;
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
         text-align: center;
       }
 

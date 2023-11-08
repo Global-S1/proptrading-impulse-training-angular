@@ -1,6 +1,6 @@
 <h2>Configuración del torneo</h2>
 <form>
-  <div class="container">
+  <div class="containerUser">
     <div class="photo-user">
       <h5>ELIGE TU FOTO DE PERFIL</h5>
 
@@ -12,18 +12,36 @@
     </div>
 
     <div class="data-user">
-      <h5>NOMBRE DE USUARIO</h5>
-      <app-input placeholder="Ingresa tu nombre de usuario"></app-input>
-      <h5>ELIGE TU AVATAR</h5>
       <div>
-        <div>
-          <img src="../../../assets/Account circle.png" alt="" />
+        <h5>NOMBRE DE USUARIO</h5>
+        <app-input
+          placeholder="Ingresa tu nombre de usuario"
+          custom="text-elevate"
+        ></app-input>
+      </div>
+
+      <div>
+        <h5>ELIGE TU AVATAR</h5>
+        <div class="containerAvatar">
+          <div class="avatar">
+            <img src="../../../assets/Account circle.png" alt="" />
+          </div>
+
+          <div class="avatar">
+            <img src="../../../assets/Account circle.png" alt="" />
+          </div>
+
+          <div class="avatar">
+            <img src="../../../assets/Account circle.png" alt="" />
+          </div>
+          <!-- class="w-75 h-75" -->
         </div>
       </div>
     </div>
   </div>
 
   <div class="condicional">
+    <app-input type="checkbox"></app-input>
     <span>Acepto el uso de los datos de mi cuenta para este torneo</span>
   </div>
 
