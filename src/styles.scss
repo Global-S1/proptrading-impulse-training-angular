@@ -208,6 +208,11 @@ app-auth {
 }
 
 app-mask {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   width: 100vw;
   height: 100%;
 
@@ -415,7 +420,7 @@ app-mask {
       @media (max-width: 730px) {
         background: transparent;
         border: none;
-        box-shadow: none
+        box-shadow: none;
       }
 
       .containerUser {
@@ -433,7 +438,6 @@ app-mask {
 
         .photo-user {
           width: 40%;
-
 
           img {
             width: 102.366px;
@@ -534,6 +538,42 @@ app-mask {
       .button {
         grid-area: button;
       }
+    }
+  }
+
+  app-promotion {
+    > div {
+      max-width: 1060px;
+      height: 430px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+
+      background: linear-gradient(
+        124deg,
+        rgba(6, 11, 40, 0.88) 18.24%,
+        rgba(6, 43, 99, 0.71) 86.24%
+      );
+      border-radius: 20px;
+      backdrop-filter: blur(25px);
+
+      margin-bottom: 30px;
+    }
+
+    img {
+      margin: 20px 0;
+    }
+
+    input {
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 1060px;
     }
   }
 }

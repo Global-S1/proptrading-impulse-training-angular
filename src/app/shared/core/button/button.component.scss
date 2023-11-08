@@ -1,6 +1,3 @@
-.min {
-  min-width: 345px;
-}
 
 button {
   display: flex;
@@ -19,6 +16,10 @@ button {
   outline: none;
 }
 
+.min {
+  min-width: 345px;
+}
+
 .page {
   width: 326px;
   height: 45px;
@@ -35,4 +36,9 @@ button {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
+}
+
+.page-promotion {
+  width: 199px;
+  font-weight: 700;
 }

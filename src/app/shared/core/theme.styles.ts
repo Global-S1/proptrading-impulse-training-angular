@@ -4,5 +4,6 @@ export const ThemeBtn: IThemeBtn = {
   min: 'min',
   page: 'page',
   pageAnalyzer: 'page-analyzer',
+  pagePromotion: 'page-promotion',
   default: ''
 }
