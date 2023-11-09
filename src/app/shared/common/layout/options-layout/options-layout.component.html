@@ -2,5 +2,11 @@
   <div class="circle">
     <img [src]="option.src" [alt]="option.alt" />
   </div>
-  <span>{{ option.text }}</span>
+  <strong *ngIf="!option.values">{{ option.text }}</strong>
+  <details *ngIf="option.values">
+    <summary><strong>{{ option.text }}</strong> <img src="../../../../../assets/options/arrow.svg" width="20px" alt="arrow"></summary>
+    <ul>
+      <li *ngFor="let value of option.values">{{ value }}</li>
+    </ul>
+  </details>
 </div>

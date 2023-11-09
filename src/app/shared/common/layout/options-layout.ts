@@ -2,10 +2,12 @@ export interface IOptions {
   id: number,
   src: string,
   alt: string,
-  text: string
+  text: string,
+  values?: string[]
 }
 
-export const options = [
+
+export const options: IOptions[] = [
   {
     id: 1,
     src: "../../../../../assets/options/home.svg",
@@ -28,7 +30,8 @@ export const options = [
     id: 4,
     src: "../../../../../assets/options/promotion.svg",
     alt: "icon-menu-home",
-    text: "Promociones"
+    text: "Promociones",
+    values: ["Promociones Vigentes", "Cuentas promocionales" ]
   },
   {
     id: 5,
