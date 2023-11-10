@@ -8,20 +8,27 @@ import { CoreModule } from 'src/app/shared/core/core.module';
 import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
-
-
+import { PerfilNoVerifyComponent } from '../perfil-no-verify/perfil-no-verify.component';
 
 @NgModule({
-  declarations: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent, ElevateComponent, PromotionComponent,
-    OffersComponent],
-  imports: [
-    CommonModule,
-    CoreModule,
-    SharedModule
+  declarations: [
+    MaskComponent,
+    ChallengeComponent,
+    ChallengeCartComponent,
+    ElevateComponent,
+    PromotionComponent,
+    OffersComponent,
+    PerfilNoVerifyComponent,
   ],
-  exports: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent, ElevateComponent, PromotionComponent,
-    OffersComponent]
+  imports: [CommonModule, CoreModule, SharedModule],
+  exports: [
+    MaskComponent,
+    ChallengeComponent,
+    ChallengeCartComponent,
+    ElevateComponent,
+    PromotionComponent,
+    OffersComponent,
+    PerfilNoVerifyComponent,
+  ],
 })
-export class MaskModule { }
+export class MaskModule {}

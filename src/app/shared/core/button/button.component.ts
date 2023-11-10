@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ThemeBtn } from '../theme.styles';
-import { IOptionThemeBtn } from '../theme.styles.interface';
+import { IOptionCustomBtn } from '../theme.styles.interface';
 
 @Component({
   selector: 'app-button',
@@ -12,13 +12,13 @@ export class ButtonComponent implements OnInit {
 
   @Input() type:string = "button";
   @Input() text: string = "";
-  @Input() theme!: IOptionThemeBtn;
+  @Input() custom!: IOptionCustomBtn;
 
   themeClassName!:string
 
   constructor() {}
 
   ngOnInit(): void {
-    this.themeClassName = this.theme ? ThemeBtn[this.theme] : ThemeBtn.default;
+    this.themeClassName = this.custom ? ThemeBtn[this.custom] : ThemeBtn.default;
   }
 }
