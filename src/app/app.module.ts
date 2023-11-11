@@ -15,6 +15,7 @@ import { MaskModule } from './modules/mask/mask.module';
     AppRoutingModule,
     AuthModule,
     MaskModule
+    }
   ],
   providers: [],
   bootstrap: [AppComponent]
