@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputComponent } from './input/input.component';
-import { ButtonComponent } from './button/button.component';
 import { AtomsFormFieldModule } from './atoms-form-field/atoms-form-field.module';
+import { ButtonModule } from './atoms/button/button.module';
+import { InputModule } from './atoms/input/input.module';
 
 
 @NgModule({
-  declarations: [ButtonComponent , InputComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    AtomsFormFieldModule
+    AtomsFormFieldModule,
+    ButtonModule,
+    InputModule
   ],
-  exports: [ButtonComponent , InputComponent, AtomsFormFieldModule]
+  exports: [ButtonModule , InputModule, AtomsFormFieldModule]
 })
 export class CoreModule { }

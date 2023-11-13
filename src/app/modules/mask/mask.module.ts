@@ -9,6 +9,8 @@ import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
 import { PerfilNoVerifyComponent } from '../perfil-no-verify/perfil-no-verify.component';
+import { FileUploaderComponent } from '../perfil-no-verify/file-uploader/file-uploader.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { PerfilNoVerifyComponent } from '../perfil-no-verify/perfil-no-verify.co
     PromotionComponent,
     OffersComponent,
     PerfilNoVerifyComponent,
+    FileUploaderComponent
   ],
   imports: [CommonModule, CoreModule, SharedModule],
   exports: [
