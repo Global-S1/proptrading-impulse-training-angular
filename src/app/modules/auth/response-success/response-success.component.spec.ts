@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResponseSuccessComponent } from './response-success.component';
 
-describe('ResponseSuccessComponent', () => {
+fdescribe('ResponseSuccessComponent', () => {
   let component: ResponseSuccessComponent;
   let fixture: ComponentFixture<ResponseSuccessComponent>;
 
@@ -17,5 +17,24 @@ describe('ResponseSuccessComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have an image with alt text "image-success"', () => {
+    const imgElement: HTMLImageElement = fixture.nativeElement.querySelector('img');
+    expect(imgElement).toBeTruthy();
+    expect(imgElement.alt).toBe('image-success');
+  });
+
+  it('should have a heading with text "¡Bienvenido!"', () => {
+    const headingElement: HTMLHeadingElement = fixture.nativeElement.querySelector('h2');
+    expect(headingElement).toBeTruthy();
+    expect(headingElement.textContent).toContain('¡Bienvenido!');
+  });
+
+  it('should have a paragraph with the expected content', () => {
+    const paragraphElement: HTMLParagraphElement = fixture.nativeElement.querySelector('p');
+    expect(paragraphElement).toBeTruthy();
+    const expectedContent = '¡Tu registro se ha realizado exitosamente! Solo falta que realices un último paso: ingrese a la casilla de tu email de registro y verifique su cuenta con el email que le acabamos de enviar.';
+    expect(paragraphElement.textContent?.trim()).toContain(expectedContent);
   });
 });
