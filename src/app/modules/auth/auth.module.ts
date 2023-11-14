@@ -4,10 +4,10 @@ import { AuthComponent } from './auth.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
-import { RecoveryPasswordComponent } from './recovery-password/recovery-password.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [AuthComponent, FooterComponent, LoginComponent, RecoveryPasswordComponent],
+  declarations: [AuthComponent, FooterComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     CoreModule
