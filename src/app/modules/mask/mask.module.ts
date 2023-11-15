@@ -9,6 +9,7 @@ import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
 import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.module';
+import { BuyChallengeComponent } from '../buy-challenge/buy-challenge.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.modul
     ChallengeCartComponent,
     ElevateComponent,
     PromotionComponent,
-    OffersComponent
+    OffersComponent,
+    BuyChallengeComponent
   ],
   imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule],
   exports: [
@@ -27,7 +29,8 @@ import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.modul
     ChallengeCartComponent,
     ElevateComponent,
     PromotionComponent,
-    OffersComponent
+    OffersComponent,
+    BuyChallengeComponent
   ],
 })
 export class MaskModule {}
