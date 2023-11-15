@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/common/shared.module';
 import { ChallengeComponent } from '../challenge/challenge.component';
 import { MaskComponent } from './mask.component';
-import { ChallengeCartComponent } from '../challenge/challenge-cart/challenge-cart.component';
+import { ChallengeCartComponent } from '../challenge/components/challenge-cart/challenge-cart.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
 import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
-import { PerfilNoVerifyComponent } from '../perfil-no-verify/perfil-no-verify.component';
-import { FileUploaderComponent } from '../perfil-no-verify/file-uploader/file-uploader.component';
+import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.module';
 
 
 @NgModule({
@@ -19,19 +18,16 @@ import { FileUploaderComponent } from '../perfil-no-verify/file-uploader/file-up
     ChallengeCartComponent,
     ElevateComponent,
     PromotionComponent,
-    OffersComponent,
-    PerfilNoVerifyComponent,
-    FileUploaderComponent
+    OffersComponent
   ],
-  imports: [CommonModule, CoreModule, SharedModule],
+  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule],
   exports: [
     MaskComponent,
     ChallengeComponent,
     ChallengeCartComponent,
     ElevateComponent,
     PromotionComponent,
-    OffersComponent,
-    PerfilNoVerifyComponent,
+    OffersComponent
   ],
 })
 export class MaskModule {}
