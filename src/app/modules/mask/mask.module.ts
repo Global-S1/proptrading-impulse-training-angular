@@ -10,6 +10,7 @@ import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
 import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.module';
 import { BuyChallengeComponent } from '../buy-challenge/buy-challenge.component';
+import { OrderSummaryModule } from '../order-summary/order-summary.module';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { BuyChallengeComponent } from '../buy-challenge/buy-challenge.component'
     OffersComponent,
     BuyChallengeComponent
   ],
-  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule],
+  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule, OrderSummaryModule],
   exports: [
     MaskComponent,
     ChallengeComponent,
