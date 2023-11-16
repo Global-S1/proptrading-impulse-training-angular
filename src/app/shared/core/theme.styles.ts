@@ -6,5 +6,6 @@ export const ThemeBtn: ICustomBtn = {
   pageAnalyzer: 'page-analyzer',
   layout: 'layout-cart',
   pagePromotion: 'page-promotion',
+  pageOrderSummary: 'page-order-summary',
   default: ''
 }

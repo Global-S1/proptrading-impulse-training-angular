@@ -6,7 +6,7 @@ import { PerfilNoVerifyModule } from './perfil-no-verify.module';
 import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
-fdescribe('PerfilNoVerifyComponent', () => {
+describe('PerfilNoVerifyComponent', () => {
   let component: PerfilNoVerifyComponent;
   let fixture: ComponentFixture<PerfilNoVerifyComponent>;
 

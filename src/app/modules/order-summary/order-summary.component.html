@@ -1,63 +1,59 @@
-<img src="../../../assets/icons/arrow-left.png" alt="arrow-left">
-<a href="">Escoge otro método de pago</a>
+<div class="change-method-payment">
+  <img src="../../../assets/icons/arrow-left.png" alt="arrow-left" />
+  <b>
+    <a href="">Escoge otro método de pago</a>
+  </b>
+</div>
 
 <h2>Resumen del pedido</h2>
 
-<div>
-  <span>PAGANDO CON</span>
-  <img src="../../../assets/images/coinpayments.png" alt="coinpayments" width="130">
-
+<div class="box">
   <div>
-    <span>Días Adicionales</span>
-    <span>15 días</span>
+    <label>PAGANDO CON</label>
+    <img src="../../../assets/images/coinpayments.png" alt="coinpayments" />
   </div>
 
-  <div>
-    <span>Días Adicionales</span>
-    <span>15 días</span>
-  </div>
+  <app-data-table [description]="info.description" [result]="info.result"  *ngFor="let info of infoTable"></app-data-table>
 
-  <div>
-    <span>Crypto moneda</span>
-    <span>USDT</span>
-  </div>
-
-  <div>
-    <span>Red</span>
-    <span>TRC20</span>
-  </div>
-
-  <div>
+  <div class="total">
     <b>Monto a Pagar</b>
     <b>$15</b>
   </div>
 </div>
 
-<img src="../../../assets/QRcoinpayments.png" alt="QR">
+<img src="../../../assets/QRcoinpayments.png" alt="QR" />
 
-<div>
+<div class="container-input-code-promotion">
   <app-input custom="default"></app-input>
-  <app-button text="agregar la imagen"></app-button>
+  <app-button>
+    <img src="../../../assets/icons/documents.png" alt="documents" />
+  </app-button>
 </div>
 
-<div>
-  <img src="" alt=""><b>Ten en cuenta:</b>
-  <p>El código de pago de su orden solo es válido durante 2 horas. Si transcurre este tiempo, deberá generar un nuevo código antes de realizar su pago.</p>
+<div class="warning">
+  <div>
+    <img src="../../../assets/icons/warning.png" alt="warning" /><b>Ten en cuenta:</b>
+  </div>
+  <p>
+    El código de pago de su orden solo es válido durante 2 horas. Si transcurre
+    este tiempo, deberá generar un nuevo código antes de realizar su pago.
+  </p>
+  <span>X</span>
 </div>
 
-<div>
-  <b>X</b>
-  <span>
-    TIEMPO RESTANTE
-  </span>
-  <span>
-    1:56:22
-  </span>
-  <app-button text="IR A SITIO DEL PROCESADOR" custom="default"></app-button>
+<div class="time-restart">
+  <label> TIEMPO RESTANTE </label>
+  <b> 1:56:22 </b>
+  <app-button text="IR A SITIO DEL PROCESADOR" custom="pageOrderSummary">
+    <img src="../../../assets/icons/Union.png" alt="union" />
+  </app-button>
 </div>
 
 <p>
-  Asegúrate de enviar suficiente como para cubrir las comisiones de transacción. Solo usa envíos regulares, no con funciones especiales o algún tipo de contrato.<br/>ID de pago: CPHG07VZ5RAVYFXF6FENEBKBND<br/>Para volver al ver esta información puedes ir a la sección de Órdenes
+  Asegúrate de enviar suficiente como para cubrir las comisiones de transacción.
+  Solo usa envíos regulares, no con funciones especiales o algún tipo de
+  contrato.<br />ID de pago: CPHG07VZ5RAVYFXF6FENEBKBND<br />Para volver al ver
+  esta información puedes ir a la sección de Órdenes
 </p>
 
-<app-button text="YA REALICÉ EL PAGO" ></app-button>
+<app-button text="YA REALICÉ EL PAGO" custom="pageOrderSummary"></app-button>

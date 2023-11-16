@@ -1,4 +1,4 @@
-export type IOptionCustomBtn =  "min" | "page" |"default" | "pageAnalyzer" | "pagePromotion" | "layout"
+export type IOptionCustomBtn =  "min" | "page" |"default" | "pageAnalyzer" | "pagePromotion" | "layout" | "pageOrderSummary"
 
 export interface ICustomBtn {
   min: string,
@@ -6,5 +6,6 @@ export interface ICustomBtn {
   pageAnalyzer: string,
   layout: string,
   pagePromotion: string,
+  pageOrderSummary: string,
   default: string
 }
