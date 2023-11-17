@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AtomsFormFieldModule } from './atoms-form-field/atoms-form-field.module';
 import { ButtonModule } from './atoms/button/button.module';
 import { InputModule } from './atoms/input/input.module';
-
+import { DataTableModule } from './atoms/data-table/data-table.module';
 
 @NgModule({
   declarations: [],
@@ -11,8 +11,9 @@ import { InputModule } from './atoms/input/input.module';
     CommonModule,
     AtomsFormFieldModule,
     ButtonModule,
-    InputModule
+    InputModule,
+    DataTableModule,
   ],
-  exports: [ButtonModule , InputModule, AtomsFormFieldModule]
+  exports: [ButtonModule, InputModule, AtomsFormFieldModule, DataTableModule],
 })
-export class CoreModule { }
+export class CoreModule {}

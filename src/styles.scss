@@ -1098,15 +1098,171 @@ app-mask {
     }
   }
 
+  app-challenge-extended {
+    display: grid;
+    gap: 30px 0;
+    margin: 0 20px;
 
+    .box {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: end;
+
+      width: 90%;
+
+      background: linear-gradient(
+        127deg,
+        rgba(6, 11, 38, 0.74) 28.26%,
+        rgba(6, 43, 99, 0.5) 91.2%
+      );
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+      overflow-y: auto;
+
+      position: relative;
+      padding: 20px 10px 54px 10px;
+
+      &::-webkit-scrollbar {
+        background-color: #062b63;
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #007cff;
+        border-radius: 8px;
+      }
+
+      &::-webkit-scrollbar-button {
+        background-color: #007cff;
+        height: 0px;
+      }
+
+      app-data-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        margin: 6px 0 0 0;
+
+        img[alt="line"] {
+          width: 100%;
+        }
+      }
+
+      .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+
+        padding: 0px 20px;
+        border-radius: 15px;
+        background: #0075ff;
+      }
+    }
+
+    app-payment-options {
+      > div {
+        display: grid;
+        align-items: center;
+        height: 112px;
+        padding: 5px 15px;
+
+        border-radius: 20px;
+        background: linear-gradient(
+          127deg,
+          rgba(6, 11, 40, 0.94) 19.41%,
+          rgba(10, 14, 35, 0.49) 76.65%
+        );
+        backdrop-filter: blur(60px);
+
+        label {
+          display: grid;
+          place-items: center;
+
+          width: 110px;
+          height: 22px;
+
+          padding: 0px 8px;
+
+          border-radius: 54px;
+          background: #1e244b;
+
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+
+        img {
+          margin-right: 10px;
+          object-fit: contain;
+        }
+
+        img[alt="arrow-left"] {
+          transform: rotate(180deg);
+          margin: 0;
+        }
+
+        > div {
+          display: flex;
+          justify-self: center;
+          align-self: start;
+        }
+      }
+    }
+
+    .payment-method {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-rows: 50px 1fr;
+      grid-template-areas:
+        "title-USDT title-VISA"
+        "options-USDT options-VISA";
+
+      img[alt="usdt"] {
+        margin-right: 6px;
+      }
+
+      .title-USDT {
+        grid-area: title-USDT;
+
+        span {
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+
+      .options-USDT {
+        grid-area: options-USDT;
+        display: flex;
+        gap: 0 10px;
+      }
+
+      .title-VISA {
+        grid-area: title-VISA;
+      }
+
+      .options-VISA {
+        grid-area: options-VISA;
+        display: flex;
+        gap: 0 10px;
+      }
+    }
+  }
 }
 
 app-auth {
   app-footer {
-
-    p, a {
+    p,
+    a {
       font-size: 12px;
-      color: #A0AEC0;
+      color: #a0aec0;
     }
   }
 }
