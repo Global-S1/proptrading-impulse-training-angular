@@ -1,0 +1,166 @@
+<h2>{{ constants.title }}</h2>
+<form>
+  <div class="data">
+    <h5>{{ constants.personalData.subtitle }}</h5>
+
+    <app-form-field-input
+      class="box1"
+      [label]="constants.personalData.fields[0].title"
+      [placeholder]="constants.personalData.fields[0].placeholder"
+      [custom]="constants.personalData.fields[0].custom"
+    ></app-form-field-input>
+
+    <app-form-field-select
+      class="box2"
+      [label]="constants.personalData.fields[1].label"
+      [formData]="constants.personalData.fields[1].info"
+    ></app-form-field-select>
+
+    <app-form-field-select
+      class="box3"
+      [label]="constants.personalData.fields[2].label"
+      [formData]="constants.personalData.fields[2].info"
+    ></app-form-field-select>
+  </div>
+
+  <div class="data">
+    <h5>{{ constants.finance.subtitle }}</h5>
+
+    <app-form-field-select
+      class="box1"
+      [label]="constants.finance.fields[0].label"
+      [formData]="constants.finance.fields[0].info"
+    ></app-form-field-select>
+
+    <app-form-field-select
+      class="box2"
+      [label]="constants.finance.fields[1].label"
+      [formData]="constants.finance.fields[1].info"
+    ></app-form-field-select>
+  </div>
+
+  <div class="data">
+    <h5>{{ constants.profile.subtitle }}</h5>
+
+    <app-form-field-select
+      class="box1"
+      [label]="constants.profile.fields[0].label"
+      [formData]="constants.profile.fields[0].info"
+    ></app-form-field-select>
+
+    <app-form-field-select
+      class="box2"
+      [label]="constants.profile.fields[1].label"
+      [formData]="constants.profile.fields[1].info"
+    ></app-form-field-select>
+  </div>
+
+  <div>
+    <h5>{{ constants.experience.subtitle }}</h5>
+    <p>{{ constants.experience.question }}</p>
+    <div class="checks">
+      <div>
+        <app-input type="checkbox" ></app-input>
+        <span>{{ constants.experience.response[0] }}</span>
+      </div>
+      <div>
+        <app-input type="checkbox"></app-input>
+        <span>{{ constants.experience.response[1] }}</span>
+      </div>
+    </div>
+
+    <div *ngIf="false" class="data">
+
+      <app-form-field-select
+        class="box1"
+        [label]="constants.experience.fields[0].label"
+        [formData]="constants.experience.fields[0].info"
+      ></app-form-field-select>
+
+
+      <app-form-field-input
+      class="box2"
+      [label]="constants.experience.fields[1].title"
+      [placeholder]="constants.experience.fields[1].placeholder"
+      [custom]="constants.experience.fields[1].custom"
+    ></app-form-field-input>
+
+
+      <app-form-field-input
+      class="box3"
+      [label]="constants.experience.fields[2].title"
+      [placeholder]="constants.experience.fields[2].placeholder"
+      [custom]="constants.experience.fields[2].custom"
+    ></app-form-field-input>
+    </div>
+
+    <div *ngIf="false" class="data">
+
+      <app-form-field-input
+      class="box1"
+      [label]="constants.experience.fields[3].title"
+      [placeholder]="constants.experience.fields[3].placeholder"
+      [custom]="constants.experience.fields[3].custom"
+    ></app-form-field-input>
+
+
+      <app-form-field-select
+        class="box2"
+        [label]="constants.experience.fields[4].label"
+        [formData]="constants.experience.fields[4].info"
+      ></app-form-field-select>
+
+
+      <app-form-field-select
+        class="box3"
+        [label]="constants.experience.fields[5].label"
+        [formData]="constants.experience.fields[5].info"
+      ></app-form-field-select>
+    </div>
+  </div>
+
+  <div>
+    <h5>{{ constants.residence.subtitle }}</h5>
+    <div class="checks">
+      <app-input type="checkbox"></app-input>
+      <b>{{ constants.residence.description }}</b>
+    </div>
+
+    <app-form-field-select
+      class="box2"
+      [label]="constants.residence.fields[0].label"
+      [formData]="constants.residence.fields[0].info"
+    ></app-form-field-select>
+
+    <div class="checks">
+      <app-input type="checkbox"></app-input>
+      <span>{{ constants.residence.condicional }}</span>
+    </div>
+    <p>
+      {{ constants.residence.text }}
+    </p>
+  </div>
+
+  <div>
+    <h5>{{ constants.document.subtitle }}</h5>
+    <p class="paragraph">
+      {{ constants.document.description[0] }}
+      <b>{{ constants.document.description[1] }}</b>
+      <b>{{ constants.document.description[2] }}</b>
+      <b>{{ constants.document.description[3] }}</b
+      >{{ constants.document.description[4] }}
+      <b>{{ constants.document.description[5] }}</b
+      >{{ constants.document.description[6]
+      }}<b>{{ constants.document.description[7] }}</b>
+    </p>
+
+    <div class="container-appFileUpload">
+      <app-file-uploader
+      *ngFor="let label of constants.document.filesUploader"
+      [label]="label"
+      ></app-file-uploader>
+    </div>
+  </div>
+
+  <app-button [text]="constants.button.text" [custom]="constants.button.custom"></app-button>
+</form>
