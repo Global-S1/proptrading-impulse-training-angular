@@ -1,59 +1,81 @@
 <div class="change-method-payment">
-  <img src="../../../assets/icons/arrow-left.png" alt="arrow-left" />
+  <img
+    [src]="constantsOS.changeMethod.src"
+    [alt]="constantsOS.changeMethod.alt"
+  />
   <b>
-    <a href="">Escoge otro método de pago</a>
+    <a href="">{{ constantsOS.changeMethod.anchor }}</a>
   </b>
 </div>
 
-<h2>Resumen del pedido</h2>
+<h2>{{ constantsOS.title }}</h2>
 
 <div class="box">
   <div>
-    <label>PAGANDO CON</label>
-    <img src="../../../assets/images/coinpayments.png" alt="coinpayments" />
+    <label>{{ constantsOS.box }}</label>
+    <img [src]="constantsOS.box.src" [alt]="constantsOS.box.alt" />
   </div>
 
-  <app-data-table [description]="info.description" [result]="info.result"  *ngFor="let info of infoTable"></app-data-table>
+  <app-data-table
+    [description]="info.description"
+    [result]="info.result"
+    *ngFor="let info of infoTable"
+  ></app-data-table>
 
   <div class="total">
-    <b>Monto a Pagar</b>
-    <b>$15</b>
+    <b>{{ constantsOS.box.total.description }}</b>
+    <b>{{ constantsOS.box.total.amount }}</b>
   </div>
 </div>
 
-<img src="../../../assets/QRcoinpayments.png" alt="QR" />
+<img [src]="constantsOS.QR.src" [alt]="constantsOS.QR.alt" />
 
 <div class="container-input-code-promotion">
-  <app-input custom="default"></app-input>
+  <app-input [custom]="constantsOS.codePromotion.input.custom"></app-input>
   <app-button>
-    <img src="../../../assets/icons/documents.png" alt="documents" />
+    <img
+      [src]="constantsOS.codePromotion.button.src"
+      [alt]="constantsOS.codePromotion.button.alt"
+    />
   </app-button>
 </div>
 
 <div class="warning">
   <div>
-    <img src="../../../assets/icons/warning.png" alt="warning" /><b>Ten en cuenta:</b>
+    <img [src]="constantsOS.warning.src" [alt]="constantsOS.warning.alt" /><b>{{
+      constantsOS.warning.subtitle
+    }}</b>
   </div>
   <p>
-    El código de pago de su orden solo es válido durante 2 horas. Si transcurre
-    este tiempo, deberá generar un nuevo código antes de realizar su pago.
+    {{ constantsOS.warning.paragraph }}
   </p>
   <span>X</span>
 </div>
 
 <div class="time-restart">
-  <label> TIEMPO RESTANTE </label>
-  <b> 1:56:22 </b>
-  <app-button text="IR A SITIO DEL PROCESADOR" custom="pageOrderSummary">
-    <img src="../../../assets/icons/Union.png" alt="union" />
+  <label>{{ constantsOS.timeRestart.label }}</label>
+  <b> 1:56:22
+  </b>
+  <app-countdown [targetDate]="targetDate"></app-countdown>
+  <!-- constantsOS.timeRestart.time -->
+  <app-button
+    [text]="constantsOS.timeRestart.button.text"
+    [custom]="constantsOS.timeRestart.button.custom"
+  >
+    <img
+      [src]="constantsOS.timeRestart.button.img.src"
+      [alt]="constantsOS.timeRestart.button.img.alt"
+    />
   </app-button>
 </div>
 
 <p>
-  Asegúrate de enviar suficiente como para cubrir las comisiones de transacción.
-  Solo usa envíos regulares, no con funciones especiales o algún tipo de
-  contrato.<br />ID de pago: CPHG07VZ5RAVYFXF6FENEBKBND<br />Para volver al ver
-  esta información puedes ir a la sección de Órdenes
+  {{ constantsOS.paragraph[0] }}<br />{{ constantsOS.paragraph[1] }}<br />{{
+    constantsOS.paragraph[2]
+  }}
 </p>
 
-<app-button text="YA REALICÉ EL PAGO" custom="pageOrderSummary"></app-button>
+<app-button
+  [text]="constantsOS.button.text"
+  [custom]="constantsOS.button.custom"
+></app-button>

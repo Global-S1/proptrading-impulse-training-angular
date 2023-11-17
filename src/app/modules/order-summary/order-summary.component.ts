@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { constantsOrderSummary } from './utils/constants';
+import { IOrderSummaryConstants, ISummaryData } from './interface/constants.interface';
 
 @Component({
   selector: 'app-order-summary',
@@ -7,12 +8,16 @@ import { constantsOrderSummary } from './utils/constants';
   styleUrls: ['./order-summary.component.scss'],
 })
 export class OrderSummaryComponent {
-  infoTable!: {
-    description: string;
-    result: string;
-  }[];
+  constantsOS: IOrderSummaryConstants;
+  infoTable!: ISummaryData[];
+
+  targetDate: Date;
 
   constructor() {
-    this.infoTable = constantsOrderSummary.summaryData;
+    this.constantsOS = constantsOrderSummary
+    this.infoTable = constantsOrderSummary.box.summaryData;
+
+    this.targetDate = new Date();
+    this.targetDate.setMinutes(this.targetDate.getMinutes() + 120);
   }
 }
