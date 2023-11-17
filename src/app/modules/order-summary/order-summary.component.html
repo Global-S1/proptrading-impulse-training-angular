@@ -54,10 +54,9 @@
 
 <div class="time-restart">
   <label>{{ constantsOS.timeRestart.label }}</label>
-  <b> 1:56:22
+  <b>
+    <app-countdown [targetDate]="targetDate"></app-countdown>
   </b>
-  <app-countdown [targetDate]="targetDate"></app-countdown>
-  <!-- constantsOS.timeRestart.time -->
   <app-button
     [text]="constantsOS.timeRestart.button.text"
     [custom]="constantsOS.timeRestart.button.custom"
