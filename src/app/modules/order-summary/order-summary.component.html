@@ -40,7 +40,7 @@
   </app-button>
 </div>
 
-<div class="warning">
+<div  *ngIf="warning" class="warning">
   <div>
     <img [src]="constantsOS.warning.src" [alt]="constantsOS.warning.alt" /><b>{{
       constantsOS.warning.subtitle
@@ -49,7 +49,7 @@
   <p>
     {{ constantsOS.warning.paragraph }}
   </p>
-  <span>X</span>
+  <span (click)="closeWarning()">X</span>
 </div>
 
 <div class="time-restart">

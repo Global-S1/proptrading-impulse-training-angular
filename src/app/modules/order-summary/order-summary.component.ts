@@ -10,6 +10,7 @@ import { IOrderSummaryConstants, ISummaryData } from './interface/constants.inte
 export class OrderSummaryComponent {
   constantsOS: IOrderSummaryConstants;
   infoTable!: ISummaryData[];
+  warning: boolean = true
 
   targetDate: Date;
 
@@ -19,5 +20,9 @@ export class OrderSummaryComponent {
 
     this.targetDate = new Date();
     this.targetDate.setMinutes(this.targetDate.getMinutes() + 120);
+  }
+
+  closeWarning() {
+    this.warning = !this.warning
   }
 }
