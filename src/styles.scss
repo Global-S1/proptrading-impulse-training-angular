@@ -56,7 +56,11 @@ app-auth {
     }
 
     div {
-      div {
+      app-social-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         width: 75px;
         height: 75px;
         border-radius: 20px;
@@ -79,8 +83,9 @@ app-auth {
       color: white;
     }
 
-    p {
+    label {
       font-weight: 600;
+      margin-bottom: 5px;
     }
   }
 

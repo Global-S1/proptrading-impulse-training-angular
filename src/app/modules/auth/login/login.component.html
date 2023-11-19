@@ -1,28 +1,22 @@
-<h2>Ingresa a tu cuenta</h2>
+<h2>{{ constantsL.title }}</h2>
 <div class="d-flex gap-2">
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/facebook.png" alt="facebook" />
-  </div>
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/apple.png" alt="apple" />
-  </div>
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/google.png" alt="google" />
-  </div>
+
+  <app-social-login [src]="logo.src" [alt]="logo.alt" *ngFor="let logo of constantsL.logos"></app-social-login>
+
 </div>
-<span>o</span>
+<span>{{ constantsL.alternative }}</span>
 
 <div class="w-50">
-  <p>email</p>
+  <label>email</label>
   <input type="text" placeholder="Ingresé su email" class="w-100 text-white"/>
 </div>
 
 <div class="w-50">
-  <p>contraseña</p>
+  <label>contraseña</label>
   <input type="password" placeholder="Ingresé su contraseña" class="w-100 text-white"/>
 </div>
 
-<a href="" style="display: block">¿Olvidaste tu contraseña?</a>
+<a href="" style="display: block">{{ constantsL.forgotPassword.text }}</a>
 
-<button class="bg-primary w-50">INICIAR SESIÓN</button>
-<span>¿No tienes cuenta aún?<a href="">Registrate</a></span>
+<button class="bg-primary w-50">{{ constantsL.button }}</button>
+<span>{{ constantsL.ask.text }}<a href="">{{ constantsL.ask.anchor }}</a></span>
