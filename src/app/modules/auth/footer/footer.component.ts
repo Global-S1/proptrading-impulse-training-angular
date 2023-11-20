@@ -8,5 +8,5 @@ import { ICONSTANTS_FOOTER } from './utils/constants.interface';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  constants: ICONSTANTS_FOOTER = CONSTANTS_FOOTER
+  footerConstants: ICONSTANTS_FOOTER = CONSTANTS_FOOTER
 }

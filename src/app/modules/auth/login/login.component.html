@@ -1,18 +1,29 @@
-<h2>{{ constants.title }}</h2>
+<h2>{{ loginConstants.title }}</h2>
 <div class="container-social-login">
-
-  <app-social-login [src]="logo.src" [alt]="logo.alt" *ngFor="let logo of constants.logos"></app-social-login>
-
+  <app-social-login
+    [src]="logo.src"
+    [alt]="logo.alt"
+    *ngFor="let logo of loginConstants.logos"
+  ></app-social-login>
 </div>
 
-<span>{{ constants.alternative }}</span>
+<span>{{ loginConstants.alternative }}</span>
 
-<div class="form-input" *ngFor="let info of constants.formInput">
+<div class="form-input" *ngFor="let info of loginConstants.formInput">
   <label>{{ info.title }}</label>
-  <app-input [type]="info.input.type" [placeholder]="info.input.placeholder" ></app-input>
+  <app-input
+    [type]="info.input.type"
+    [placeholder]="info.input.placeholder"
+  ></app-input>
 </div>
 
-<a href="">{{ constants.forgotPassword.text }}</a>
+<a href="">{{ loginConstants.forgotPassword.text }}</a>
 
-<app-button [text]="constants.button.text" [theme]="constants.button.custom"></app-button>
-<span>{{ constants.ask.text }}<a href="">{{ constants.ask.anchor }}</a></span>
+<app-button
+  [text]="loginConstants.button.text"
+  [theme]="loginConstants.button.custom"
+></app-button>
+<span class="ask"
+  >{{ loginConstants.ask.text
+  }}<a href="">{{ loginConstants.ask.anchor }}</a></span
+>

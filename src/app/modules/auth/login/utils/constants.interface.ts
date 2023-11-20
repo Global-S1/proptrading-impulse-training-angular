@@ -1,32 +1,9 @@
 import { IOptionThemeBtn } from "src/app/shared/core/theme.styles.interface";
-
-interface ILogo {
-  src: string;
-  alt: string;
-}
-
-interface IFormInput {
-  title: string;
-  input: {
-    type: string;
-    placeholder: string;
-  };
-}
-
-interface IForgotPassword {
-  href: string;
-  text: string;
-}
-
-interface IButton {
-  text: string;
-  custom: IOptionThemeBtn
-}
-
-interface IAsk {
-  text: string;
-  anchor: string;
-}
+import { ILogo } from '../interface/logo.interface';
+import { IFormInput } from '../interface/formInput.interface';
+import { IForgotPassword } from '../interface/forgotPassword.interface';
+import { IButton } from '../interface/button.interface';
+import { IAsk } from '../interface/ask.interface';
 
 
 export interface ICONSTANTS_LOGIN {

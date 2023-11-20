@@ -1,6 +1,6 @@
 import { ICONSTANTS_LOGIN } from "./constants.interface";
 
-export const constantsLogin: ICONSTANTS_LOGIN = {
+export const pageContent: ICONSTANTS_LOGIN = {
   title: 'Ingresa a tu cuenta',
   logos: [
     {

@@ -8,5 +8,5 @@ import { ICONSTANTS_AUTH } from './utils/constants.interface';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  constants: ICONSTANTS_AUTH = CONSTANTS_AUTH
+  authConstants: ICONSTANTS_AUTH = CONSTANTS_AUTH
 }

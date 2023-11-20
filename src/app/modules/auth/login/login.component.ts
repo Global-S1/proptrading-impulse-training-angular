@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { constantsLogin } from './utils/constants'
+import { pageContent } from './utils/constants'
 import { ICONSTANTS_LOGIN } from './utils/constants.interface';
 
 @Component({
@@ -8,5 +8,5 @@ import { ICONSTANTS_LOGIN } from './utils/constants.interface';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constants: ICONSTANTS_LOGIN = constantsLogin
+  loginConstants: ICONSTANTS_LOGIN = pageContent
 }
