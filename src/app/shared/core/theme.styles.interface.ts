@@ -1,6 +1,11 @@
-export type IOptionThemeBtn =  "min" | "default"
+export type IOptionCustomBtn =  "min" | "page" |"default" | "pageAnalyzer" | "pagePromotion" | "layout" | "pageOrderSummary"
 
-export interface IThemeBtn {
-  default: string,
-  min: string
+export interface ICustomBtn {
+  min: string,
+  page: string,
+  pageAnalyzer: string,
+  layout: string,
+  pagePromotion: string,
+  pageOrderSummary: string,
+  default: string
 }
