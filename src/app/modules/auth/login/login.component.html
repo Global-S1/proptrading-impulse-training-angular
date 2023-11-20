@@ -1,22 +1,18 @@
-<h2>{{ constantsL.title }}</h2>
-<div class="d-flex gap-2">
+<h2>{{ constants.title }}</h2>
+<div class="container-social-login">
 
-  <app-social-login [src]="logo.src" [alt]="logo.alt" *ngFor="let logo of constantsL.logos"></app-social-login>
+  <app-social-login [src]="logo.src" [alt]="logo.alt" *ngFor="let logo of constants.logos"></app-social-login>
 
 </div>
-<span>{{ constantsL.alternative }}</span>
 
-<div class="w-50">
-  <label>email</label>
-  <input type="text" placeholder="Ingresé su email" class="w-100 text-white"/>
+<span>{{ constants.alternative }}</span>
+
+<div class="form-input" *ngFor="let info of constants.formInput">
+  <label>{{ info.title }}</label>
+  <app-input [type]="info.input.type" [placeholder]="info.input.placeholder" ></app-input>
 </div>
 
-<div class="w-50">
-  <label>contraseña</label>
-  <input type="password" placeholder="Ingresé su contraseña" class="w-100 text-white"/>
-</div>
+<a href="">{{ constants.forgotPassword.text }}</a>
 
-<a href="" style="display: block">{{ constantsL.forgotPassword.text }}</a>
-
-<button class="bg-primary w-50">{{ constantsL.button }}</button>
-<span>{{ constantsL.ask.text }}<a href="">{{ constantsL.ask.anchor }}</a></span>
+<app-button [text]="constants.button.text" [theme]="constants.button.custom"></app-button>
+<span>{{ constants.ask.text }}<a href="">{{ constants.ask.anchor }}</a></span>

@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./scss/abstract/mixins.scss";
+@import "./scss/abstract/variable.scss";
+
+@import "./scss/base/base.scss";
+@import "./scss/base/reset.scss";
+
 
 *,
 *::before,
@@ -7,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: var(--font-family);
 }
 
 body {
@@ -20,15 +27,70 @@ body {
   height: 100vh;
 }
 
+app-button {
+  width: 100%;
+  max-width: 350px;
+}
+
 app-root {
   width: 100%;
   height: 100%;
-  background: url("./assets/Recurso\ 1\ 1.png");
 }
 
 app-auth {
+  @include dflex(row, nowrap, space-evenly, center);
+  height: 100%;
+  min-height: 490px;
+  background: url("./assets/Recurso\ 1\ 1.png");
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+
+
+  @include RESPONSIVE(950px){
+    @include dflex(column, nowrap, center, center);
+    h2 {
+      display: none
+    }
+  }
+
+
+  .auth {
+    @include dflex(column, nowrap, center, center);
+    height: 100%;
+    max-height: 500px;
+
+    img {
+      width: 399.009px;
+      height: 101.384px;
+    }
+
+    @include RESPONSIVE(950px){
+      height: 20%;
+      img {
+        width: 239.195px;
+        height: 65.988px;
+      }
+    }
+
+    @include XS() {
+      img {
+        width: 111.965px;
+        height: 28.449px;
+      }
+    }
+  }
+
+  .containerAuth {
+    @include dflex(column, nowrap, space-around, center);
+    height: 75%;
+    max-height: 500px;
+  }
 
   app-login {
+    @include dflex(column, nowrap, space-between, center);
+    height: 100%;
+
     a,
     span {
       color: #a0aec0;
@@ -41,11 +103,12 @@ app-auth {
       }
     }
 
-    div {
+    .container-social-login {
+      @include dflex(row, nowrap, stretch, stretch);
+      gap: 15px;
+
       app-social-login {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include dflex(row, nowrap, center, center);
 
         width: 75px;
         height: 75px;
@@ -57,6 +120,7 @@ app-auth {
           rgba(255, 255, 255, 0.04) 70.38%
         );
         backdrop-filter: blur(21px);
+        margin: 10px 0;
 
         img {
           width: 31px;
@@ -73,13 +137,29 @@ app-auth {
       font-weight: 600;
       margin-bottom: 5px;
     }
+
+    .form-input {
+      width: 90%;
+    }
   }
 
   app-footer {
+    margin: 10px 0;
+
+    div {
+      @include dflex(row, nowrap, space-between, center)
+    }
+
     p,
     a {
       font-size: 12px;
       color: #a0aec0;
+      text-decoration: none;
+    }
+
+    p {
+      margin: auto;
+      padding: 5px 0;
     }
   }
 }
