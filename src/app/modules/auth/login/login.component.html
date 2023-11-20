@@ -1,0 +1,18 @@
+<h2>{{ constants.title }}</h2>
+<div class="container-social-login">
+
+  <app-social-login [src]="logo.src" [alt]="logo.alt" *ngFor="let logo of constants.logos"></app-social-login>
+
+</div>
+
+<span>{{ constants.alternative }}</span>
+
+<div class="form-input" *ngFor="let info of constants.formInput">
+  <label>{{ info.title }}</label>
+  <app-input [type]="info.input.type" [placeholder]="info.input.placeholder" ></app-input>
+</div>
+
+<a href="">{{ constants.forgotPassword.text }}</a>
+
+<app-button [text]="constants.button.text" [theme]="constants.button.custom"></app-button>
+<span>{{ constants.ask.text }}<a href="">{{ constants.ask.anchor }}</a></span>
