@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth.component';
 import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
-import { CoreModule } from 'src/app/shared/core/core.module';
-import { RegisterComponent } from './register/register.component';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
-  declarations: [AuthComponent, FooterComponent, LoginComponent, RegisterComponent],
+  declarations: [AuthComponent, FooterComponent],
   imports: [
     CommonModule,
-    CoreModule
+    LoginModule,
+    RegisterModule
   ],
   exports: [AuthComponent]
 })

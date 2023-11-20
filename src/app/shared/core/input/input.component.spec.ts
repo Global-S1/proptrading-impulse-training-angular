@@ -18,4 +18,14 @@ describe('InputComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('test at type', () => {
+    const inputElement = document.querySelector('input');
+    expect(inputElement?.type).toBe("text");
+
+    (inputElement as HTMLInputElement).type = "file";
+    fixture.detectChanges();
+
+    expect(inputElement?.type).toBe("file");
+  });
 });

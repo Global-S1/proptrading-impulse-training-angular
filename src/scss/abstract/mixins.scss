@@ -1,0 +1,36 @@
+@mixin dflex( $direccion, $wrap, $justify, $align ) {
+  display: flex;
+  flex-flow: $direccion $wrap;
+  justify-content: $justify;
+  align-items: $align;
+};
+
+@mixin XL() {
+  @media screen and (max-width: 1024px) {
+    @content
+  }
+};
+
+@mixin MD() {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+};
+
+@mixin SM() {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+};
+
+@mixin XS() {
+  @media screen and (max-width: 325px) {
+    @content
+  }
+};
+
+@mixin RESPONSIVE($media){
+  @media screen and (max-width: $media) {
+    @content
+  }
+}
