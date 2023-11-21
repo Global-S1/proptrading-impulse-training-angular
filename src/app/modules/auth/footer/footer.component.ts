@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { CONSTANTS_FOOTER } from './utils/constants'
-import { ICONSTANTS_FOOTER } from './utils/constants.interface';
+import { PAGE_CONTENT_FOOTER } from './utils/constants'
+import { IPAGE_CONTENT_FOOTER } from './utils/constants.interface';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +8,5 @@ import { ICONSTANTS_FOOTER } from './utils/constants.interface';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  footerConstants: ICONSTANTS_FOOTER = CONSTANTS_FOOTER
+  pageContent: IPAGE_CONTENT_FOOTER = PAGE_CONTENT_FOOTER
 }

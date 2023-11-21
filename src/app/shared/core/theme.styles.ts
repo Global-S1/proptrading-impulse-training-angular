@@ -1,6 +1,6 @@
-import { IThemeBtn } from "./theme.styles.interface";
+import { ICustomBtn } from "./theme.styles.interface";
 
-export const ThemeBtn: IThemeBtn = {
+export const ThemeBtn: ICustomBtn = {
   min: "",
   default: ""
 }

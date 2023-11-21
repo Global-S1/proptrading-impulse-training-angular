@@ -1,4 +1,4 @@
-import { IOptionThemeBtn } from "src/app/shared/core/theme.styles.interface";
+import { IOptionCustomBtn } from "src/app/shared/core/theme.styles.interface";
 import { ILogo } from '../interface/logo.interface';
 import { IFormInput } from '../interface/formInput.interface';
 import { IForgotPassword } from '../interface/forgotPassword.interface';
@@ -6,7 +6,7 @@ import { IButton } from '../interface/button.interface';
 import { IAsk } from '../interface/ask.interface';
 
 
-export interface ICONSTANTS_LOGIN {
+export interface IPAGE_CONTENT_LOGIN {
   title: string;
   logos: ILogo[];
   alternative: string;

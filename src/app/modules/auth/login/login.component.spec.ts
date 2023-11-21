@@ -22,35 +22,35 @@ fdescribe('LoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display the login heading', () => {
+  it('should display "Ingresa a tu cuenta" in login, when the view starts', () => {
     const headingElement = fixture.debugElement.query(
       By.css('h2')
     ).nativeElement;
     expect(headingElement.textContent).toContain('Ingresa a tu cuenta');
   });
 
-  it('should have three social login icons', () => {
+  it('should display three social login icons, when the view starts', () => {
     const socialIcons = fixture.debugElement.queryAll(
       By.css('app-social-login')
     );
     expect(socialIcons.length).toBe(3);
   });
 
-  it('should display email input field', () => {
+  it('should display email input field, when the view starts', () => {
     const emailInput = fixture.debugElement.query(
       By.css('input[type="text"]')
     ).nativeElement;
     expect(emailInput).toBeTruthy();
   });
 
-  it('should display password input field', () => {
+  it('should display password input field, when the view starts', () => {
     const passwordInput = fixture.debugElement.query(
       By.css('input[type="password"]')
     ).nativeElement;
     expect(passwordInput).toBeTruthy();
   });
 
-  it('should display "Forgot your password?" link', () => {
+  it('should display "¿Olvidaste tu contraseña?" link, when the view starts', () => {
     const forgotPasswordLink = fixture.debugElement.query(
       By.css('a')
     ).nativeElement;
@@ -59,14 +59,14 @@ fdescribe('LoginComponent', () => {
     );
   });
 
-  it('should display login button', () => {
+  it('should display login button with text "INICIAR SESIÓN", when the view starts', () => {
     const loginButton = fixture.debugElement.query(
       By.css('button')
     ).nativeElement;
     expect(loginButton.textContent).toContain('INICIAR SESIÓN');
   });
 
-  it('should display "Don\'t have an account? Register" link, when you deliver by constants their value', () => {
+  it('should display "¿No tienes cuenta aún?" the span, when you deliver by constants their value', () => {
     const registerLink = fixture.debugElement.query(
       By.css('.ask')
     ).nativeElement;

@@ -1,6 +1,6 @@
-export type IOptionThemeBtn =  "min" | "default"
+export type IOptionCustomBtn =  "min" | "default"
 
-export interface IThemeBtn {
+export interface ICustomBtn {
   default: string,
   min: string
 }

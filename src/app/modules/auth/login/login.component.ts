@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { pageContent } from './utils/constants'
-import { ICONSTANTS_LOGIN } from './utils/constants.interface';
+import { PAGE_CONTENT_LOGIN } from './utils/constants'
+import { IPAGE_CONTENT_LOGIN } from './utils/constants.interface';
 
 @Component({
   selector: 'app-login',
@@ -8,5 +8,5 @@ import { ICONSTANTS_LOGIN } from './utils/constants.interface';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  loginConstants: ICONSTANTS_LOGIN = pageContent
+  pageContent: IPAGE_CONTENT_LOGIN = PAGE_CONTENT_LOGIN
 }

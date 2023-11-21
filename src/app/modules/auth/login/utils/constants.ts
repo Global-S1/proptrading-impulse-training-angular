@@ -1,6 +1,6 @@
-import { ICONSTANTS_LOGIN } from "./constants.interface";
+import { IPAGE_CONTENT_LOGIN } from "./constants.interface";
 
-export const pageContent: ICONSTANTS_LOGIN = {
+export const PAGE_CONTENT_LOGIN: IPAGE_CONTENT_LOGIN = {
   title: 'Ingresa a tu cuenta',
   logos: [
     {

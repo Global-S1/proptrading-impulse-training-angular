@@ -1,6 +1,6 @@
-import { ICONSTANTS_FOOTER } from "./constants.interface";
+import { IPAGE_CONTENT_FOOTER } from "./constants.interface";
 
-export const CONSTANTS_FOOTER: ICONSTANTS_FOOTER = {
+export const PAGE_CONTENT_FOOTER: IPAGE_CONTENT_FOOTER = {
   copyright: "© Impulse World 2023. Todos los derechos reservados.",
   links: [
     {
