@@ -1,4 +1,6 @@
-export const pageContent = {
+import { ICONTANTS_REGISTER } from "./constants.interface";
+
+export const constantsRegister: ICONTANTS_REGISTER = {
   title: 'Regístrate',
   socialRegister: [
     {
@@ -14,7 +16,7 @@ export const pageContent = {
       alt: 'google',
     },
   ],
-  o: "o",
+  alternative: 'o',
   fields: [
     {
       name: "Nombre",
@@ -26,7 +28,8 @@ export const pageContent = {
     },
     {
       name: "Sexo",
-      placeholder: "ESTE TIENE QUE SER UN SELECT"
+      placeholder: "ESTE TIENE QUE SER UN SELECT",
+      options: ["Femenino", "Masculino"]
     },
     {
       name: "DNI",
@@ -42,7 +45,8 @@ export const pageContent = {
     },
     {
       name: "País",
-      placeholder: "SELECT"
+      placeholder: "SELECT",
+      options: ["añadir los paises", "añadir los paises", "añadir los paises"]
     },
     {
       name: "Ciudad",

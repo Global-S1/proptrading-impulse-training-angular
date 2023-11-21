@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RegisterComponent } from './register.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
+import { RegisterModule } from './register.module';
+import { By } from '@angular/platform-browser';
 
 fdescribe('RegisterComponent', () => {
   let component: RegisterComponent;
@@ -10,7 +12,7 @@ fdescribe('RegisterComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RegisterComponent],
-      imports: [CoreModule]
+      imports: [CoreModule, RegisterModule],
     });
     fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
@@ -21,35 +23,38 @@ fdescribe('RegisterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a registration button with text "Regístrate"', () => {
-    const buttonElement: HTMLButtonElement = fixture.nativeElement.querySelector('app-button');
+  it('should display "Regístrate", when "app-button" is presented', () => {
+    const buttonElement: HTMLButtonElement =
+      fixture.nativeElement.querySelector('app-button');
     expect(buttonElement).toBeTruthy();
     expect(buttonElement.textContent).toContain('Regístrate');
   });
 
-  it('should have a link to initiate login', () => {
-    const loginLink: HTMLAnchorElement = fixture.nativeElement.querySelector('span a');
+  it('should display anchor "Inicia tu sesión", when initializing', () => {
+    const loginLink: HTMLAnchorElement =
+      fixture.nativeElement.querySelector('.ask');
     expect(loginLink).toBeTruthy();
-    expect(loginLink.href).toContain(''); // Add the actual href once it is defined
+    expect(loginLink.textContent).toContain("Inicia tu sesión");
   });
 
-  it('should have input elements for name, surname, gender, DNI, email, phone, country, and city', () => {
-    const inputElements: NodeListOf<HTMLInputElement> = fixture.nativeElement.querySelectorAll('app-input input');
-    expect(inputElements.length).toBe(8);
+  it('should display the "options", when they are sent', () => {
+    const selectFormField = fixture.debugElement.query(
+      By.css('.form-field-select')
+    );
 
-    const placeholderTexts = [
-      'Ingresa tu(s) nombre(s)',
-      'Ingresa tu(s) apellido(s)',
-      'ESTE TIENE QUE SER UN SELECT',
-      'Ingresa su número de DNI',
-      'Ingresa tu dirección de email',
-      'Ingrese su teléfono',
-      'SELECT',
-      'Ingresa tu ciudad',
-    ];
+    const selectDOM =
+      selectFormField.nativeNode.__ng_debug__.children[1].nativeNode
+        .__ng_debug__.children[0].nativeElement;
 
-    for (let i = 0; i < inputElements.length; i++) {
-      expect(inputElements[i].placeholder).toBe(placeholderTexts[i]);
+    const optionsSelectDOM = selectDOM.querySelectorAll('option');
+
+    const placeholderTexts = {
+      name: 'Genero',
+      options: ['Seleccionar', 'Femenino', 'Masculino'],
+    };
+
+    for (let i = 0; i < optionsSelectDOM.length; i++) {
+      expect(optionsSelectDOM[i].textContent).toBe(placeholderTexts.options[i]);
     }
   });
 });

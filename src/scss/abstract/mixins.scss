@@ -5,6 +5,12 @@
   align-items: $align;
 };
 
+@mixin dgrid( $column, $min, $max, $rowHeight ){
+  display: grid;
+  grid-template-columns: repeat( $column, minmax($min, $max) );
+  grid-auto-rows: $rowHeight;
+}
+
 @mixin XL() {
   @media screen and (max-width: 1024px) {
     @content

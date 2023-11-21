@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./form-field-select.component.scss']
 })
 export class FormFieldSelectComponent {
-  @Input() formData: string[] = [];
+  @Input() formData: string[] | undefined = [];
   @Input() label: string = '';
 
   constructor(){}

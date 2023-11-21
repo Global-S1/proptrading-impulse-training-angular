@@ -36,3 +36,25 @@ input {
   outline: none;
   background: transparent;
 }
+
+select {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 40px;
+
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.86);
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0) -15.2%,
+    rgba(255, 255, 255, 0.1) 104.95%
+  );
+  outline: none;
+  background: transparent;
+
+  option {
+    background-color: #062b63
+  }
+}

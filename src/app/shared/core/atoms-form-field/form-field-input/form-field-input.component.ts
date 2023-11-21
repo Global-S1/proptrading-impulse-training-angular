@@ -12,30 +12,4 @@ export class FormFieldInputComponent {
   @Input() placeholder: string = '';
   @Input() custom: string = '';
 
-
-  // ngOnInit(){
-  //   this.data = this.data.filter((element)=>
-  //   'title' in element &&
-  //   'placeholder' in element &&
-  //   'custom' in element &&
-  //   typeof element.title === 'string' &&
-  //   typeof element.placeholder === 'string' &&
-  //   typeof element.custom === 'string'
-  //   )
-  //   console.log(this.data)
-  // }
-
-  // constructor(){
-  //   this.data = this.data.filter((element)=>
-  //   'title' in element &&
-  //   'placeholder' in element &&
-  //   'custom' in element &&
-  //   typeof element.title === 'string' &&
-  //   typeof element.placeholder === 'string' &&
-  //   typeof element.custom === 'string'
-  //   )
-  //   console.log(this.data)
-  // }
-
-
 }

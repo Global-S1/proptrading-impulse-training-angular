@@ -1,4 +1,4 @@
-import { IOptionThemeBtn } from "src/app/shared/core/theme.styles.interface";
+import { IOptionCustomBtn } from "src/app/shared/core/theme.styles.interface";
 import { ILogo } from '../interface/logo.interface';
 import { IFormInput } from '../interface/formInput.interface';
 import { IForgotPassword } from '../interface/forgotPassword.interface';

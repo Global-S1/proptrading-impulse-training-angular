@@ -205,7 +205,7 @@ app-auth {
       }
     }
 
-    @include XS() {
+    @include RESPONSIVE(375px) {
       img {
         width: 111.965px;
         height: 28.449px;
@@ -215,6 +215,7 @@ app-auth {
 
   .containerAuth {
     @include dflex(column, nowrap, space-around, center);
+    width: 50%;
     height: 75%;
     max-height: 500px;
   }
@@ -280,7 +281,8 @@ app-auth {
     margin: 10px 0;
 
     div {
-      @include dflex(row, nowrap, space-between, center)
+      @include dflex(row, nowrap, space-between, center);
+      gap: 8px;
     }
 
     p,
@@ -299,13 +301,11 @@ app-auth {
   app-register {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
     place-items: center;
     justify-content: center;
-    padding: 5px 0;
+    padding: 5px;
 
-    width: 75%;
-    height: 85%;
+    width: 93%;
 
     border-radius: 20px;
     border: 2px solid white;
@@ -326,6 +326,59 @@ app-auth {
       text-decoration: none;
       color: white;
       margin-left: 4px;
+    }
+
+    .container-social-register {
+      display: flex;
+      gap: 8px;
+    }
+
+    app-social-register {
+      @include dflex(row, nowrap, center, center);
+
+      width: 75px;
+      height: 75px;
+      border-radius: 20px;
+      border: 2px solid #fff;
+      background: linear-gradient(
+        124deg,
+        rgba(255, 255, 255, 0) -22.38%,
+        rgba(255, 255, 255, 0.04) 70.38%
+      );
+      backdrop-filter: blur(21px);
+      margin: 10px 0;
+
+      img {
+        width: 31px;
+        height: 31px;
+      }
+    }
+
+    .fields {
+      @include dgrid(2, 160px, 240px, 65px);
+      margin: 5px 0;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    @include RESPONSIVE(950px) {
+      border: none;
+      background: transparent;
+
+      .container-social-register {
+        margin-top: 170px
+      }
+    }
+
+    @include RESPONSIVE(375px) {
+
+      .container-social-register {
+        margin-top: 420px
+      }
+
+      .fields {
+        @include dgrid(1, 160px, 240px, 65px);
+      }
     }
   }
 
@@ -1181,25 +1234,4 @@ app-mask {
   }
 
 
-}
-
-app-auth {
-  app-footer {
-
-    p, a {
-      font-size: 12px;
-      color: #A0AEC0;
-    }
-
-    .container-social-register {
-      display: flex;
-      gap: 8px;
-
-      app-social-register {
-        @include dflex(row, nowrap, center, center)
-      }
-    }
-
-
-  }
 }

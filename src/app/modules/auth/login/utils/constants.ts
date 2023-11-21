@@ -1,3 +1,4 @@
+import { IOptionCustomBtn } from "src/app/shared/core/theme.styles.interface";
 import { ICONSTANTS_LOGIN } from "./constants.interface";
 
 export const pageContent: ICONSTANTS_LOGIN = {
@@ -39,7 +40,7 @@ export const pageContent: ICONSTANTS_LOGIN = {
   },
   button: {
     text: 'INICIAR SESIÓN',
-    custom: 'min'
+    custom: 'min' as IOptionCustomBtn
   },
   ask: {
     text: '¿No tienes cuenta aún?',
