@@ -1,0 +1,12 @@
+<div *ngFor="let option of options">
+  <div class="circle">
+    <img [src]="option.src" [alt]="option.alt" />
+  </div>
+  <strong *ngIf="!option.values">{{ option.text }}</strong>
+  <details *ngIf="option.values">
+    <summary><strong>{{ option.text }}</strong> <img src="../../../../../assets/options/arrow.svg" width="20px" alt="arrow"></summary>
+    <ul>
+      <li *ngFor="let value of option.values">{{ value }}</li>
+    </ul>
+  </details>
+</div>
