@@ -19,19 +19,19 @@ fdescribe('ResponseSuccessComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have an image with alt text "image-success"', () => {
+  it('should display an image with alt text "image-success", when initialized', () => {
     const imgElement: HTMLImageElement = fixture.nativeElement.querySelector('img');
     expect(imgElement).toBeTruthy();
     expect(imgElement.alt).toBe('image-success');
   });
 
-  it('should have a heading with text "¡Bienvenido!"', () => {
+  it('should display a heading with text "¡Bienvenido!", when initialized', () => {
     const headingElement: HTMLHeadingElement = fixture.nativeElement.querySelector('h2');
     expect(headingElement).toBeTruthy();
     expect(headingElement.textContent).toContain('¡Bienvenido!');
   });
 
-  it('should have a paragraph with the expected content', () => {
+  it('should have a paragraph with the expected content, when initialized', () => {
     const paragraphElement: HTMLParagraphElement = fixture.nativeElement.querySelector('p');
     expect(paragraphElement).toBeTruthy();
     const expectedContent = '¡Tu registro se ha realizado exitosamente! Solo falta que realices un último paso: ingrese a la casilla de tu email de registro y verifique su cuenta con el email que le acabamos de enviar.';

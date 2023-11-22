@@ -1,11 +1,9 @@
 <div>
   <div>
-    <img src="../../../../assets/icons/check.png" alt="image-success">
-    <h2>¡Bienvenido!</h2>
+    <img [src]="pageContent.src" [alt]="pageContent.alt">
+    <h2>{{ pageContent.title }}</h2>
     <p>
-      ¡Tu registro se ha realizado exitosamente!<br /><br /> Solo falta que realices un
-      último paso: ingrese a la casilla de tu email de registro y verifique su
-      cuenta con el email que le acabamos de enviar.
+      {{ pageContent.paragraph[0] }}<br /><br />{{ pageContent.paragraph[1] }}
     </p>
   </div>
 </div>
