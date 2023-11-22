@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { contantsKYC } from './models/constants'
+import { contantsKYC } from './utils/constants'
 
 @Component({
   selector: 'app-perfil-no-verify',

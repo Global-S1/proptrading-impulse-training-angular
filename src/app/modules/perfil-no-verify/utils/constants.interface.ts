@@ -67,25 +67,5 @@ export interface SelectField {
   info: string[];
 }
 
-// extends Partial<InputField>
-
-// interface ProfileField {
-//   label: string;
-//   info: string[];
-// }
-
-// interface ExperienceField {
-//   title?: string;
-//   placeholder?: string;
-//   custom?: string;
-//   label: string;
-//   info: string[];
-// }
-
-// interface ResidenceField {
-//   label: string;
-//   info: string[];
-// }
-
 export default RegistrationForm;
 

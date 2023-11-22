@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChangePasswordComponent } from './change-password.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
+import { ChangePasswordModule } from './change-password.module';
 
 fdescribe('ChangePasswordComponent', () => {
   let component: ChangePasswordComponent;
@@ -10,7 +11,7 @@ fdescribe('ChangePasswordComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ChangePasswordComponent],
-      imports: [CoreModule]
+      imports: [CoreModule, ChangePasswordModule]
     });
     fixture = TestBed.createComponent(ChangePasswordComponent);
     component = fixture.componentInstance;
@@ -21,13 +22,13 @@ fdescribe('ChangePasswordComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have a title "Cambia tu contraseña"', () => {
+  it('should display a title "Cambia tu contraseña", when initializing', () => {
     const titleElement: HTMLHeadingElement = fixture.nativeElement.querySelector('h2');
     expect(titleElement).toBeTruthy();
     expect(titleElement.textContent).toContain('Cambia tu contraseña');
   });
 
-  it('should have three password input fields', () => {
+  it('should display three password input fields, when initializing', () => {
     const inputElements: NodeListOf<HTMLInputElement> = fixture.nativeElement.querySelectorAll('app-input input');
     expect(inputElements.length).toBe(3);
 
@@ -42,14 +43,14 @@ fdescribe('ChangePasswordComponent', () => {
     }
   });
 
-  it('should have a button with text "Empíeza"', () => {
+  it('should display a button with text "Empíeza", when initializing', () => {
     const buttonElement: HTMLButtonElement = fixture.nativeElement.querySelector('app-button');
     expect(buttonElement).toBeTruthy();
     expect(buttonElement.textContent).toContain('Empíeza');
   });
 
-  it('should have four password strength check items', () => {
-    const checkElements: NodeListOf<HTMLDivElement> = fixture.nativeElement.querySelectorAll('div img + span');
+  it('should display four "requirements", when initializing', () => {
+    const checkElements: NodeListOf<HTMLDivElement> = fixture.nativeElement.querySelectorAll('.text-requirements');
     expect(checkElements.length).toBe(4);
 
     const expectedTexts = [
