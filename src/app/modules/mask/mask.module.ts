@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChallengeComponent } from '../challenge/challenge.component';
 import { MaskComponent } from './mask.component';
-import { ChallengeCartComponent } from '../challenge/challenge-cart/challenge-cart.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
+import { ChallengeModule } from '../challenge/challenge.module';
 
 
 
 @NgModule({
-  declarations: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent],
+  declarations: [MaskComponent],
   imports: [
     CommonModule,
-    CoreModule
+    CoreModule,
+    ChallengeModule
   ],
-  exports: [MaskComponent, ChallengeComponent,
-    ChallengeCartComponent]
+  exports: [MaskComponent]
 })
 export class MaskModule { }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IBuyChallenge } from '../../interface/buy-challenge.interface';
 
 @Component({
   selector: 'app-challenge-cart',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./challenge-cart.component.scss']
 })
 export class ChallengeCartComponent {
-
+  @Input() pageContent!: IBuyChallenge
 }

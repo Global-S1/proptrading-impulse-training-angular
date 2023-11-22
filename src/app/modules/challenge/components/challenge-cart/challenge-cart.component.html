@@ -1,0 +1,44 @@
+<div>
+  <div class="fase">
+    <p>
+      {{ pageContent.title.text }}
+      <span>{{ pageContent.title.numberClient }}</span>
+    </p>
+
+    <span>{{ pageContent.phase }}</span>
+
+    <app-requirements [label]="pageContent.phase"></app-requirements>
+  </div>
+
+  <div class="credencial">
+    <figure>
+      <img [src]="pageContent.credential.src" [alt]="pageContent.credential.alt" />
+      <a href="www.google.com" routerLink="">{{ pageContent.credential.text }}</a>
+    </figure>
+
+    <app-button [text]="pageContent.credential.buttonAnalyzer.text" [theme]="pageContent.credential.buttonAnalyzer.theme"></app-button>
+  </div>
+
+  <img [src]="pageContent.line.src" [alt]="pageContent.line.alt" class="Line" />
+
+  <div class="metrics">
+    <p>
+      {{ pageContent.metrics.equity.text }}<span>{{ pageContent.metrics.equity.amount }}<span>{{ pageContent.metrics.equity.percentage }}</span></span>
+    </p>
+
+    <div>
+      <h6>{{ pageContent.metrics.resumen.title }}</h6>
+
+      <div>
+
+        <app-challenge-progress
+          *ngFor="let data of pageContent.metrics.resumen.challengeProgress"
+          class="challenge-progress"
+          [text]="data.text"
+          [value]="data.value"
+        ></app-challenge-progress>
+
+      </div>
+    </div>
+  </div>
+</div>

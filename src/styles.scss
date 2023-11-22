@@ -351,10 +351,10 @@ app-mask {
             display: flex;
             justify-content: space-between;
 
-            > div {
+            .challenge-progress {
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
+              justify-content: center;
               // align-items: center;
               flex-wrap: wrap;
 
