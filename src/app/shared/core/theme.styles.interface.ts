@@ -1,13 +1,11 @@
-export type IOptionThemeBtn =  "min" | "default"
+export type IOptionCustomBtn =  "min" | "page" |"default" | "pageAnalyzer" | "pagePromotion" | "layout" | "pageOrderSummary"
 
-// "raised" | "stroked" | "icon" | "fab" | "minifab" |
-
-export interface IThemeBtn {
-  // raised: string
-  // stroked: string
-  // icon: string
-  // fab: string,
-  // minifab: string,
-  default: string,
-  min: string
+export interface ICustomBtn {
+  min: string,
+  page: string,
+  pageAnalyzer: string,
+  layout: string,
+  pagePromotion: string,
+  pageOrderSummary: string,
+  default: string
 }
