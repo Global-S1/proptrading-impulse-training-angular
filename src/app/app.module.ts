@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { MaskModule } from './modules/mask/mask.module';
 import { SharedModule } from './shared/common/shared.module';
+import { OrdersComponent } from './modules/orders/orders.component';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,34 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let title of pageContent.headers">{{ title }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let data of pageContent.body">
+      <td>{{ data.Id }}</td>
+      <td>{{ data.challenge }}</td>
+      <td>
+        <img [src]="data.state.src" [alt]="data.state.alt" />
+        {{ data.state.text }}
+      </td>
+      <td>{{ data.amount }}</td>
+      <td>{{ data.currency }}</td>
+      <td>{{ data.date }}</td>
+
+      <td *ngIf="data.action.text === 'Ver credenciales'">
+        <img [src]="data.action.src" [alt]="data.action.alt"/><a href=""
+          >{{ data.action.text }}</a
+        >
+      </td>
+
+      <td *ngIf="['Verificar', 'Pagar'].includes(data.action.text)">
+        <img [src]="data.action.src" [alt]="data.action.alt"/>{{ data.action.text }}
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>

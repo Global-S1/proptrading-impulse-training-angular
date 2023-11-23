@@ -5,7 +5,6 @@
 @import "./scss/base/base.scss";
 @import "./scss/base/reset.scss";
 
-
 *,
 *::before,
 *::after {
@@ -178,14 +177,12 @@ app-auth {
   background-position: left;
   background-repeat: no-repeat;
 
-
-  @include RESPONSIVE(950px){
+  @include RESPONSIVE(950px) {
     @include dflex(column, nowrap, center, center);
     h2 {
-      display: none
+      display: none;
     }
   }
-
 
   .auth {
     @include dflex(column, nowrap, center, center);
@@ -197,7 +194,7 @@ app-auth {
       height: 101.384px;
     }
 
-    @include RESPONSIVE(950px){
+    @include RESPONSIVE(950px) {
       height: 20%;
       img {
         width: 239.195px;
@@ -366,14 +363,13 @@ app-auth {
       background: transparent;
 
       .container-social-register {
-        margin-top: 170px
+        margin-top: 170px;
       }
     }
 
     @include RESPONSIVE(375px) {
-
       .container-social-register {
-        margin-top: 420px
+        margin-top: 420px;
       }
 
       .fields {
@@ -403,11 +399,11 @@ app-auth {
       height: 90%;
 
       .container-form-field-input {
-        width: 100%
+        width: 100%;
       }
 
       .form-field-input {
-        @include dgrid( 1, 270px, 360px, 30px );
+        @include dgrid(1, 270px, 360px, 30px);
 
         gap: 4px;
         margin: 18px 0;
@@ -423,7 +419,7 @@ app-auth {
       }
 
       .container-requirements {
-        @include dgrid( 2, 180px, 180px, 20px );
+        @include dgrid(2, 180px, 180px, 20px);
 
         .requirements {
           @include dflex(row, wrap, space-around, center);
@@ -439,7 +435,7 @@ app-auth {
         width: 70%;
 
         .container-requirements {
-          @include dgrid( 1, 180px, 180px, 20px );
+          @include dgrid(1, 180px, 180px, 20px);
 
           margin: 7px auto;
 
@@ -506,8 +502,10 @@ app-navbar {
 }
 
 app-mask {
+  display: block;
   width: 100%;
   height: 100%;
+  margin: 0 20px;
 
   grid-area: mask;
 
@@ -1270,5 +1268,79 @@ app-mask {
     }
   }
 
+  app-orders {
+    .orders-desktop table,
+    .orders-mobile table {
+      width: 95%;
+      max-width: 1132px;
 
+      table-layout: fixed;
+
+      font-size: 14px;
+      padding: 20px;
+
+      background: linear-gradient(
+        145deg,
+        #112044 5.46%,
+        rgba(10, 14, 35, 0.49) 106.64%
+      );
+      border-radius: 20px;
+      backdrop-filter: blur(60px);
+
+      thead {
+        text-align: left;
+        th {
+          font-weight: 400;
+        }
+      }
+
+      tbody {
+        td {
+          margin: 0 7px;
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin: 0 5px;
+        }
+
+        img[alt="escudo"] {
+          width: 8.75px;
+          height: 10.174px;
+        }
+      }
+    }
+
+    .orders-mobile table {
+      th {
+        text-align: left;
+      }
+
+      img[alt="arrow-left"] {
+        width: 7px;
+        height: 100%;
+        object-fit: cover;
+        transform: rotate(90deg);
+      }
+
+      .details {
+        width: 140px;
+        border-bottom: 2px solid white;
+        padding: 10px 0;
+        margin: 10px 0;
+        display: none;
+        transition: all 1s linear;
+
+        .action {
+          margin: 5px 0
+        }
+      }
+
+      .details.isActive{
+        display: block;
+        height: 150px;
+      }
+    }
+  }
 }

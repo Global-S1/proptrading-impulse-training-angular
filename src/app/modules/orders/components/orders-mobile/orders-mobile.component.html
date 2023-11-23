@@ -1,0 +1,46 @@
+<table>
+  <thead>
+    <tr>
+      <th *ngFor="let title of pageContent.headers">{{ title }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <ng-container *ngFor="let info of pageContent.body">
+      <tr>
+        <th>{{ info.date }}</th>
+        <th>{{ info.description }}</th>
+
+        <th>
+          <img [src]="info.iconStatus.src" [alt]="info.iconStatus.alt" />
+          <img
+            src="../../../assets/icons/arrow-left.png"
+            alt="arrow-left"
+            (click)="onDetails()"
+          />
+        </th>
+      </tr>
+
+      <div *ngIf="details" [ngClass]="{ 'details isActive': details }">
+        <div *ngFor="let content of info.data">
+          <span class="concept">{{ content.concept }}: </span>
+          <ng-container>
+
+            <span *ngIf="content.value && !content.icon">{{ content.value }}</span>
+
+            <span *ngIf="!content.value && content.icon">
+              <img [src]="content.icon.src" [alt]="content.icon.alt" />
+              {{ content.icon.value }}
+            </span>
+          </ng-container>
+        </div>
+
+        <div class="action">
+          <img [src]="info.action.src" [alt]="info.action.alt" />
+          <a href="">{{ info.action.text }}</a>
+        </div>
+      </div>
+    </ng-container>
+
+  </tbody>
+</table>
