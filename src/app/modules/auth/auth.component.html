@@ -1,7 +1,8 @@
-<div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center">
-  <img [src]="impulseLogo" alt="logo-impulse" class="w-50">
-  <h2>Que el dinero no sea <br/>un impedimento</h2>
+<div class="auth">
+  <img [src]="authConstants.logo.src" [alt]="authConstants.logo.alt">
+  <h2>{{ authConstants.title[0] }}<br/>{{ authConstants.title[1] }}</h2>
 </div>
-<div class="w-50 h-100 d-flex flex-column justify-content-center align-items-center">
-  <app-footer class="my-2"></app-footer>
+<div class="containerAuth">
+  <app-change-password></app-change-password>
+  <app-footer></app-footer>
 </div>
