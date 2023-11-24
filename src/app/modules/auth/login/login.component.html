@@ -1,34 +1,29 @@
-<h2>Ingresa a tu cuenta</h2>
-<div class="d-flex gap-2">
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/facebook.png" alt="facebook" />
-  </div>
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/apple.png" alt="apple" />
-  </div>
-  <div class="d-flex justify-content-center align-items-center">
-    <img src="../../../../assets/icons/google.png" alt="google" />
-  </div>
-</div>
-<span>o</span>
-
-<div class="w-50">
-  <p>email</p>
-  <app-input placeholder="Ingresé su email"></app-input>
+<h2>{{ loginConstants.title }}</h2>
+<div class="container-social-login">
+  <app-social-login
+    [src]="logo.src"
+    [alt]="logo.alt"
+    *ngFor="let logo of loginConstants.logos"
+  ></app-social-login>
 </div>
 
-<div class="w-50">
-  <p>contraseña</p>
-  <app-input type="password" placeholder="Ingresé su contraseña"></app-input>
+<span>{{ loginConstants.alternative }}</span>
+
+<div class="form-input" *ngFor="let info of loginConstants.formInput">
+  <label>{{ info.title }}</label>
+  <app-input
+    [type]="info.input.type"
+    [placeholder]="info.input.placeholder"
+  ></app-input>
 </div>
 
-<div class="d-flex justify-content-between align-items-center">
-  <!-- <div>
-    <button>a</button>
-    Recuerdame
-  </div> -->
-  <a href="" >¿Olvidaste tu contraseña?</a>
-</div>
+<a href="">{{ loginConstants.forgotPassword.text }}</a>
 
-<app-button text="INICIA SESIÓN" theme="min"></app-button>
-<span>¿No tienes cuenta aún?<a href="">Regístrate</a></span>
+<app-button
+  [text]="loginConstants.button.text"
+  [custom]="loginConstants.button.custom"
+></app-button>
+<span class="ask"
+  >{{ loginConstants.ask.text
+  }}<a href="">{{ loginConstants.ask.anchor }}</a></span
+>

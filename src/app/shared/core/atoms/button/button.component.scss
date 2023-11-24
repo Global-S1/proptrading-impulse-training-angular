@@ -1,0 +1,58 @@
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100%;
+  height: 44px;
+
+  padding: 0px 8px;
+
+  border-radius: 12px;
+  border: none;
+  background: #007cff;
+  backdrop-filter: blur(60px);
+  outline: none;
+}
+
+.min {
+  min-width: 345px;
+}
+
+.page {
+  width: 326px;
+  height: 45px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.page-analyzer {
+  width: 280px;
+  height: 34px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.layout-cart {
+  width: 184px;
+  height: 34px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.page-promotion {
+  width: 199px;
+  font-weight: 700;
+}
+
+.page-order-summary {
+  font-weight: 700;
+}
