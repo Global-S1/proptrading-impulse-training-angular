@@ -5,13 +5,13 @@ import { ChallengeComponent } from '../challenge/challenge.component';
 import { MaskComponent } from './mask.component';
 import { ChallengeCartComponent } from '../challenge/components/challenge-cart/challenge-cart.component';
 import { CoreModule } from 'src/app/shared/core/core.module';
-import { ElevateComponent } from '../elevate/elevate.component';
 import { PromotionComponent } from '../promotion/promotion.component';
 import { OffersComponent } from '../offers/offers.component';
 import { PerfilNoVerifyModule } from '../perfil-no-verify/perfil-no-verify.module';
 import { BuyChallengeComponent } from '../buy-challenge/buy-challenge.component';
 import { OrderSummaryModule } from '../order-summary/order-summary.module';
 import { OrdersModule } from '../orders/orders.module';
+import { ElevateModule } from '../elevate/elevate.module';
 
 
 @NgModule({
@@ -19,17 +19,16 @@ import { OrdersModule } from '../orders/orders.module';
     MaskComponent,
     ChallengeComponent,
     ChallengeCartComponent,
-    ElevateComponent,
     PromotionComponent,
     OffersComponent,
     BuyChallengeComponent
   ],
-  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule, OrderSummaryModule, OrdersModule],
+  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule, OrderSummaryModule, OrdersModule, ElevateModule],
   exports: [
     MaskComponent,
     ChallengeComponent,
     ChallengeCartComponent,
-    ElevateComponent,
+    ElevateModule,
     PromotionComponent,
     OffersComponent,
     BuyChallengeComponent
