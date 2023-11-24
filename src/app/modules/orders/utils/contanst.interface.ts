@@ -1,6 +1,6 @@
 export interface IPAGE_CONTENT_ORDERS {
   title: string;
-  paraghaf: string;
+  paragraph: string;
   table: ITableOrders;
 }
 

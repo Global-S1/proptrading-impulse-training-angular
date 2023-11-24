@@ -1,13 +1,13 @@
 <table>
   <thead>
     <tr>
-      <th *ngFor="let title of pageContent.headers">{{ title }}</th>
+      <th class="head" *ngFor="let title of pageContent.headers">{{ title }}</th>
     </tr>
   </thead>
 
   <tbody>
 
-    <tr *ngFor="let data of pageContent.body">
+    <tr class="table-row-desktop" *ngFor="let data of pageContent.body">
       <td>{{ data.Id }}</td>
       <td>{{ data.challenge }}</td>
       <td>

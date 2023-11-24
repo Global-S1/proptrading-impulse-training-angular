@@ -1275,8 +1275,9 @@ app-mask {
       max-width: 1132px;
 
       table-layout: fixed;
-
       font-size: 14px;
+
+      margin: 20px 0;
       padding: 20px;
 
       background: linear-gradient(
@@ -1312,7 +1313,21 @@ app-mask {
       }
     }
 
+    .orders-desktop table {
+      display: block;
+
+      @include RESPONSIVE(800px){
+        display: none;
+      }
+    }
+
     .orders-mobile table {
+      display: none;
+
+      @include RESPONSIVE(800px){
+        display: block;
+      }
+
       th {
         text-align: left;
       }

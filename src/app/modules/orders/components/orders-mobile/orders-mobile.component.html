@@ -1,13 +1,13 @@
 <table>
   <thead>
     <tr>
-      <th *ngFor="let title of pageContent.headers">{{ title }}</th>
+      <th class="head" *ngFor="let title of pageContent.headers">{{ title }}</th>
     </tr>
   </thead>
 
   <tbody>
     <ng-container *ngFor="let info of pageContent.body">
-      <tr>
+      <tr class="table-row">
         <th>{{ info.date }}</th>
         <th>{{ info.description }}</th>
 

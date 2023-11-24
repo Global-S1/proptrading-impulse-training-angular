@@ -2,7 +2,7 @@ import { IPAGE_CONTENT_ORDERS } from "./contanst.interface";
 
 export const PAGE_CONTENT_ORDERS: IPAGE_CONTENT_ORDERS = {
   title: "Órdenes",
-  paraghaf: "Aca veras las ordenes de compra de tus desafíos",
+  paragraph: "Aca veras las ordenes de compra de tus desafíos",
   table: {
     headers: ["Id", "Desafío", "Estado", "Monto", "Moneda", "Creado", "Acción"],
     body: [
