@@ -12,18 +12,26 @@ import { BuyChallengeComponent } from '../buy-challenge/buy-challenge.component'
 import { OrderSummaryModule } from '../order-summary/order-summary.module';
 import { OrdersModule } from '../orders/orders.module';
 import { ElevateModule } from '../elevate/elevate.module';
-
+import { PromotionModule } from '../promotion/promotion.module';
 
 @NgModule({
   declarations: [
     MaskComponent,
     ChallengeComponent,
     ChallengeCartComponent,
-    PromotionComponent,
     OffersComponent,
-    BuyChallengeComponent
+    BuyChallengeComponent,
   ],
-  imports: [CommonModule, CoreModule, SharedModule, PerfilNoVerifyModule, OrderSummaryModule, OrdersModule, ElevateModule],
+  imports: [
+    CommonModule,
+    CoreModule,
+    SharedModule,
+    PerfilNoVerifyModule,
+    OrderSummaryModule,
+    OrdersModule,
+    ElevateModule,
+    PromotionModule
+  ],
   exports: [
     MaskComponent,
     ChallengeComponent,
@@ -31,7 +39,7 @@ import { ElevateModule } from '../elevate/elevate.module';
     ElevateModule,
     PromotionComponent,
     OffersComponent,
-    BuyChallengeComponent
+    BuyChallengeComponent,
   ],
 })
 export class MaskModule {}

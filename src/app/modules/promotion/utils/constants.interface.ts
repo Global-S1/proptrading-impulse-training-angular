@@ -1,4 +1,4 @@
-import { IOptionThemeBtn } from "src/app/shared/core/theme.styles.interface"
+import { IOptionCustomBtn } from "src/app/shared/core/theme.styles.interface"
 
 export interface IPAGE_CONTENT_PROMOTION {
   title: {
@@ -16,7 +16,7 @@ export interface IPAGE_CONTENT_PROMOTION {
     },
     button: {
       text: string,
-      custom: IOptionThemeBtn
+      custom: IOptionCustomBtn
     }
   },
   paragraph: string
