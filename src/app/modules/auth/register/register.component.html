@@ -1,0 +1,32 @@
+<h2>{{ pageContent.title }}</h2>
+
+<div class="container-social-register">
+
+  <app-social-register [src]="info.src" [alt]="info.alt" *ngFor="let info of pageContent.socialRegister" class="social-register"></app-social-register>
+
+</div>
+
+<span>{{ pageContent.alternative }}</span>
+
+<div class="fields">
+  <ng-container *ngFor="let field of pageContent.fields">
+
+    <app-form-field-input
+      class="form-field-input"
+      *ngIf="!field.options"
+      [label]="field.name"
+      [placeholder]="field.placeholder"
+    ></app-form-field-input>
+
+    <app-form-field-select
+    class="form-field-select"
+    *ngIf="field.options"
+      [label]="field.name"
+      [formData]="field.options"
+    ></app-form-field-select>
+
+  </ng-container>
+</div>
+
+<app-button [text]="pageContent.button.text" custom="min"></app-button>
+<span>{{ pageContent.ask[0] }}<a href="" class="ask">{{ pageContent.ask[1] }}</a></span>

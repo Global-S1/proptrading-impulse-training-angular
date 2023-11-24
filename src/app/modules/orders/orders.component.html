@@ -1,0 +1,11 @@
+<!-- Se esta dejando código comentado aquí ya que se esta probando la opción desktop y mobile -->
+
+<h2>{{ pageContent.title }}</h2>
+<p>{{ pageContent.paragraph }}</p>
+<app-orders-desktop
+class="orders-desktop"
+[pageContent]="pageContent.table"
+></app-orders-desktop>
+<app-orders-mobile
+class="orders-mobile"
+></app-orders-mobile>
