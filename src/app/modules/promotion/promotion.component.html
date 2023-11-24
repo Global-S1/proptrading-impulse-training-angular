@@ -1,16 +1,16 @@
 <div>
   <div>
-    <img src="../../../assets/ticket.png" alt="ticket">
-    <h3>Cuenta Promocional</h3>
-    <p>Ingresa el código promocional que te fue brindado para obtener tu desafío</p>
+    <img [src]="pageContent.title.icon.src" [alt]="pageContent.title.icon.src">
+    <h3>{{ pageContent.title.text }}</h3>
+    <p>{{ pageContent.title.description }}</p>
   </div>
 
   <div>
-    <app-input placeholder="Ingresar código promocional" custom="text-promotion"></app-input>
-    <app-button text="VALIDAR CÓDIGO" theme="pagePromotion"></app-button>
+    <app-input [placeholder]="pageContent.fields.input.placeholder" [custom]="pageContent.fields.input.custom"></app-input>
+    <app-button [text]="pageContent.fields.button.text" [theme]="pageContent.fields.button.custom"></app-button>
   </div>
 
 </div>
 <p>
-  Toda la información proporcionada en este sitio está destinada únicamente a fines de estudio relacionados con el trading en los mercados financieros y no sirve en modo alguno como recomendación de inversión específica, recomendación comercial, análisis de oportunidades de inversión o recomendación general similar en relación con eltrading de instrumentos de inversión. El trading en los mercados financieros es una actividad de alto riesgo y seaconseja no arriesgar más de lo que uno pueda permitirse perder. IMPULSE WORLD, no presta ninguno de los servicios de inversión enumerados en la Ley de Empresas del Mercado de Capitales n° 256/2004 Coll. La información contenida en este sitio no está dirigida a los residentes de ningún país o jurisdicción en los que su distribución o uso sea contrario a las leyes o reglamentos locales IMPULSE WORLD no son un broker y no aceptan depósitos. La solución técnica ofrecida para las plataformas IMPULSE WORLD y la alimentación de datos es impulsada por los proveedores de liquidez institucional. https://worldtradersbroker.com
+  {{ pageContent.paragraph }}
 </p>
