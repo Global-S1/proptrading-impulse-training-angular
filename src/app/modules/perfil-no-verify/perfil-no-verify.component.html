@@ -4,6 +4,7 @@
     <h5>{{ constants.personalData.subtitle }}</h5>
 
     <app-form-field-input
+      *ngIf="isField(constants.personalData.fields[0])"
       class="box1"
       [label]="constants.personalData.fields[0].title"
       [placeholder]="constants.personalData.fields[0].placeholder"
@@ -11,12 +12,14 @@
     ></app-form-field-input>
 
     <app-form-field-select
+      *ngIf="!isField(constants.personalData.fields[1])"
       class="box2"
       [label]="constants.personalData.fields[1].label"
       [formData]="constants.personalData.fields[1].info"
     ></app-form-field-select>
 
     <app-form-field-select
+      *ngIf="!isField(constants.personalData.fields[2])"
       class="box3"
       [label]="constants.personalData.fields[2].label"
       [formData]="constants.personalData.fields[2].info"
@@ -27,12 +30,14 @@
     <h5>{{ constants.finance.subtitle }}</h5>
 
     <app-form-field-select
+      *ngIf="!isField(constants.finance.fields[0])"
       class="box1"
       [label]="constants.finance.fields[0].label"
       [formData]="constants.finance.fields[0].info"
     ></app-form-field-select>
 
     <app-form-field-select
+      *ngIf="!isField(constants.finance.fields[1])"
       class="box2"
       [label]="constants.finance.fields[1].label"
       [formData]="constants.finance.fields[1].info"
@@ -43,12 +48,14 @@
     <h5>{{ constants.profile.subtitle }}</h5>
 
     <app-form-field-select
+      *ngIf="!isField(constants.profile.fields[0])"
       class="box1"
       [label]="constants.profile.fields[0].label"
       [formData]="constants.profile.fields[0].info"
     ></app-form-field-select>
 
     <app-form-field-select
+      *ngIf="!isField(constants.profile.fields[1])"
       class="box2"
       [label]="constants.profile.fields[1].label"
       [formData]="constants.profile.fields[1].info"
@@ -60,7 +67,7 @@
     <p>{{ constants.experience.question }}</p>
     <div class="checks">
       <div>
-        <app-input type="checkbox" ></app-input>
+        <app-input type="checkbox"></app-input>
         <span>{{ constants.experience.response[0] }}</span>
       </div>
       <div>
@@ -69,54 +76,61 @@
       </div>
     </div>
 
-    <div *ngIf="false" class="data">
 
-      <app-form-field-select
-        class="box1"
-        [label]="constants.experience.fields[0].label"
-        [formData]="constants.experience.fields[0].info"
-      ></app-form-field-select>
+    <ng-container *ngIf="true">
+      <div class="data">
+        <app-form-field-select
+          *ngIf="!isField(constants.experience.fields[0])"
+          class="box1"
+          [label]="constants.experience.fields[0].label"
+          [formData]="constants.experience.fields[0].info"
+        ></app-form-field-select>
 
+        <app-form-field-input
+          *ngIf="isField(constants.experience.fields[1])"
+          class="box2"
+          [label]="constants.experience.fields[1].title"
+          [placeholder]="constants.experience.fields[1].placeholder"
+          [custom]="constants.experience.fields[1].custom"
+        ></app-form-field-input>
 
-      <app-form-field-input
-      class="box2"
-      [label]="constants.experience.fields[1].title"
-      [placeholder]="constants.experience.fields[1].placeholder"
-      [custom]="constants.experience.fields[1].custom"
-    ></app-form-field-input>
+        <app-form-field-input
+          *ngIf="isField(constants.experience.fields[2])"
+          class="box3"
+          [label]="constants.experience.fields[2].title"
+          [placeholder]="constants.experience.fields[2].placeholder"
+          [custom]="constants.experience.fields[2].custom"
+        ></app-form-field-input>
+      </div>
 
+      <div class="data">
 
-      <app-form-field-input
-      class="box3"
-      [label]="constants.experience.fields[2].title"
-      [placeholder]="constants.experience.fields[2].placeholder"
-      [custom]="constants.experience.fields[2].custom"
-    ></app-form-field-input>
-    </div>
-
-    <div *ngIf="false" class="data">
-
-      <app-form-field-input
-      class="box1"
-      [label]="constants.experience.fields[3].title"
-      [placeholder]="constants.experience.fields[3].placeholder"
-      [custom]="constants.experience.fields[3].custom"
-    ></app-form-field-input>
-
-
-      <app-form-field-select
-        class="box2"
-        [label]="constants.experience.fields[4].label"
-        [formData]="constants.experience.fields[4].info"
-      ></app-form-field-select>
+        <app-form-field-input
+          *ngIf="isField(constants.experience.fields[3])"
+          class="box1"
+          [label]="constants.experience.fields[3].title"
+          [placeholder]="constants.experience.fields[3].placeholder"
+          [custom]="constants.experience.fields[3].custom"
+        ></app-form-field-input>
 
 
-      <app-form-field-select
-        class="box3"
-        [label]="constants.experience.fields[5].label"
-        [formData]="constants.experience.fields[5].info"
-      ></app-form-field-select>
-    </div>
+        <app-form-field-select
+          *ngIf="!isField(constants.experience.fields[4])"
+          class="box2"
+          [label]="constants.experience.fields[4].label"
+          [formData]="constants.experience.fields[4].info"
+        ></app-form-field-select>
+
+
+        <app-form-field-select
+          *ngIf="!isField(constants.experience.fields[5])"
+          class="box3"
+          [label]="constants.experience.fields[5].label"
+          [formData]="constants.experience.fields[5].info"
+        ></app-form-field-select>
+      </div>
+    </ng-container>
+
   </div>
 
   <div>
@@ -127,6 +141,7 @@
     </div>
 
     <app-form-field-select
+      *ngIf="!isField(constants.residence.fields[0])"
       class="box2"
       [label]="constants.residence.fields[0].label"
       [formData]="constants.residence.fields[0].info"
@@ -156,11 +171,14 @@
 
     <div class="container-appFileUpload">
       <app-file-uploader
-      *ngFor="let label of constants.document.filesUploader"
-      [label]="label"
+        *ngFor="let label of constants.document.filesUploader"
+        [label]="label"
       ></app-file-uploader>
     </div>
   </div>
 
-  <app-button [text]="constants.button.text" [custom]="constants.button.custom"></app-button>
+  <app-button
+    [text]="constants.button.text"
+    [custom]="constants.button.custom"
+  ></app-button>
 </form>

@@ -24,7 +24,7 @@ fdescribe('PerfilNoVerifyComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should handle checkbox changes', () => {
+  it('should handle checkbox changes, when you selected', () => {
     const checkboxInput: HTMLInputElement = fixture.nativeElement.querySelector('app-input[type="checkbox"] input[type="checkbox"]');
 
     expect(checkboxInput.checked).toBe(false);
@@ -35,7 +35,7 @@ fdescribe('PerfilNoVerifyComponent', () => {
     expect(checkboxInput.checked).toBe(true);
   });
 
-  it('should handle button click event', () => {
+  it('should handle button click event, when you selected', () => {
     const paragraph = fixture.debugElement.query(By.css('.paragraph'));
 
     const description = [

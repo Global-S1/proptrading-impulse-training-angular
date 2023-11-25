@@ -1,6 +1,6 @@
-import { IInputProfile, ISelectProfile } from './constants.interface';
+import { IPAGE_CONTENT_PERFIL_NO_VERIFY } from './constants.interface';
 
-export const contantsKYC: any = {
+export const PAGE_CONTENT_PERFIL_NO_VERIFY: IPAGE_CONTENT_PERFIL_NO_VERIFY = {
   title: 'Completar los datos de mi cuenta',
 
   personalData: {
