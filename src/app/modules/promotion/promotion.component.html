@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <img [src]="pageContent.title.icon.src" [alt]="pageContent.title.icon.src">
+    <h3>{{ pageContent.title.text }}</h3>
+    <p>{{ pageContent.title.description }}</p>
+  </div>
+
+  <div>
+    <app-input [placeholder]="pageContent.fields.input.placeholder" [custom]="pageContent.fields.input.custom"></app-input>
+    <app-button [text]="pageContent.fields.button.text" [custom]="pageContent.fields.button.custom"></app-button>
+  </div>
+
+</div>
+<p>
+  {{ pageContent.paragraph }}
+</p>
