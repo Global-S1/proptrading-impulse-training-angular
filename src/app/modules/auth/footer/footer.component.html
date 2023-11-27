@@ -1,7 +1,4 @@
-<p class="px-2  mx-auto">© Impulse World 2023. Todos los derechos reservados.</p>
-<div class="d-flex justify-content-sm-between align-content-center">
-  <a href="https://impulseworld.pro/" target="_blank" class="text-decoration-none">Inicio</a>
-  <a href="https://impulseworld.pro/desafios/" target="_blank" class="text-decoration-none">Desafíos</a>
-  <a href="https://impulseworld.pro/terminos-y-condiciones/" target="_blank" class="text-decoration-none">Términos y condiciones</a
-  >
+<p>{{ pageContent.copyright }}</p>
+<div>
+  <a [href]="link.href" [target]="link.target" *ngFor="let link of pageContent.links">{{ link.text }}</a>
 </div>

@@ -1,0 +1,29 @@
+<h2>{{ pageContent.title }}</h2>
+<div class="container-social-login">
+  <app-social-login
+    [src]="logo.src"
+    [alt]="logo.alt"
+    *ngFor="let logo of pageContent.logos"
+  ></app-social-login>
+</div>
+
+<span>{{ pageContent.alternative }}</span>
+
+<div class="form-input" *ngFor="let info of pageContent.formInput">
+  <label>{{ info.title }}</label>
+  <app-input
+    [type]="info.input.type"
+    [placeholder]="info.input.placeholder"
+  ></app-input>
+</div>
+
+<a href="">{{ pageContent.forgotPassword.text }}</a>
+
+<app-button
+  [text]="pageContent.button.text"
+  [theme]="pageContent.button.custom"
+></app-button>
+<span class="ask"
+  >{{ pageContent.ask.text
+  }}<a href="">{{ pageContent.ask.anchor }}</a></span
+>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CONSTANTS_AUTH } from './utils/constants'
+import { ICONSTANTS_AUTH } from './utils/constants.interface';
 
 @Component({
   selector: 'app-auth',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-  impulseLogo: string = "../../assets/Vector.png"
+  pageContent: ICONSTANTS_AUTH = CONSTANTS_AUTH
 }
