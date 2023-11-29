@@ -49,3 +49,15 @@ input {
   border: 0.5px solid rgba(226, 232, 240, 0.3);
   background: #0f1535;
 }
+
+.modality-configure {
+  display: inline-flex;
+  align-items: center;
+
+  // width: 110px;
+  width: 48%;
+  height: 40px;
+  border-radius: 15px;
+  border: 0.5px solid rgba(226, 232, 240, 0.3);
+  background: #0f1535;
+}

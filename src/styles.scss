@@ -48,16 +48,18 @@ app-root {
   grid-template-areas:
     "layout navbar"
     "layout mask";
-  @include RESPONSIVE(1000px){
+  @include RESPONSIVE(1000px) {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "navbar"
-    "mask";
+      "navbar"
+      "mask";
   }
 
   app-layout {
     @include dflex(column, nowrap, flex-start, stretch);
-    @include RESPONSIVE(1000px){ display: none };
+    @include RESPONSIVE(1000px) {
+      display: none;
+    }
 
     width: 296px;
     height: 100%;
@@ -1323,7 +1325,7 @@ app-mask {
     .orders-desktop table {
       display: block;
 
-      @include RESPONSIVE(800px){
+      @include RESPONSIVE(800px) {
         display: none;
       }
     }
@@ -1331,7 +1333,7 @@ app-mask {
     .orders-mobile table {
       display: none;
 
-      @include RESPONSIVE(800px){
+      @include RESPONSIVE(800px) {
         display: block;
       }
 
@@ -1355,14 +1357,217 @@ app-mask {
         transition: all 1s linear;
 
         .action {
-          margin: 5px 0
+          margin: 5px 0;
         }
       }
 
-      .details.isActive{
+      .details.isActive {
         display: block;
         height: 150px;
       }
     }
   }
+
+  app-configure {
+    color: #a0aec0;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+    position: relative;
+
+    // display: flex;
+
+    .progress-line {
+      position: absolute;
+      margin: 4px 0 0;
+
+      .point {
+        width: 9px;
+        height: 9px;
+
+        padding: 0;
+
+        border: 2px solid #007cff;
+        border-radius: 50%;
+      }
+
+      .line {
+        width: 3px;
+        height: 83px;
+        background: #007cff;
+        margin: 0 2.5px;
+      }
+
+      .line1 {
+        width: 3px;
+        height: 218px;
+        background: #007cff;
+        margin: 0 2.5px;
+      }
+
+      .line2 {
+        width: 3px;
+        height: 49px;
+        background: #007cff;
+        margin: 0 2.5px;
+      }
+
+      .background-point {
+        background: #007cff;
+      }
+    }
+
+    > div:nth-child(3) {
+      padding: 0 20px 20px 15px;
+    }
+
+    img[alt="line"] {
+      width: 100%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .choice-products {
+      @include dflex(row, nowrap, center, stretch);
+      place-items: center;
+
+      height: 48px;
+
+      @include MYP(5px 0 20px, 0 10px);
+      gap: 0 10px;
+      @include backgroundDefault();
+
+      img {
+        width: 80px;
+        height: 30px;
+        border-radius: 8px;
+        object-fit: contain;
+        border: 1px solid transparent;
+        &:hover {
+          border: 1px solid #007cff;
+        }
+      }
+    }
+
+    .choice-challenge {
+      @include dflex(row, nowrap, center, center);
+      width: 100%;
+
+      span {
+        display: inline-grid;
+        place-items: center;
+        width: 106px;
+        height: 32px;
+
+        font-size: 12px;
+
+        border-radius: 8px;
+        background: #2f3a54;
+        margin: 0 5px;
+
+        &:hover {
+          background: #007cff;
+        }
+      }
+    }
+
+    .data-choice-challenge {
+      @include dgrid(2, 200px, 400px, 30px);
+      justify-content: space-between;
+      gap: 10px;
+      position: relative;
+
+      > div {
+        @include dflex(row, nowrap, space-between, center);
+      }
+
+      img[alt="line"] {
+        position: absolute;
+        width: 100%;
+        bottom: 35px;
+      }
+    }
+
+    .modality {
+      height: 185px;
+
+      @include MYP(5px 0 20px, 20px);
+      @include backgroundDefault();
+    }
+
+    .modality-trading {
+      @include dflex(row, nowrap, center, center);
+      width: 100%;
+      padding: 20px 0;
+      gap: 0 10px;
+
+      .button {
+        width: 110px;
+      }
+
+      button {
+        width: 110px;
+        background: #2f3a54;
+        border-radius: 8px;
+
+        &:hover {
+          background: #007cff;
+        }
+      }
+    }
+
+    .amount-pay {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      margin: 20px 0;
+      gap: 0 10px;
+
+      div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 48%;
+        height: 60px;
+        padding: 0px 20px;
+        @include backgroundDefault();
+      }
+
+      div:nth-child(2) {
+        @include dflex(column, nowrap, flex-start, stretch);
+        width: 48%;
+      }
+    }
+
+    .conditional-configure {
+      > div {
+        @include dflex( row, nowrap, stretch, center );
+        gap: 0 10px;
+
+        input[type="checkbox"] {
+          width: 15px;
+        }
+
+      }
+    }
+
+    .button-buy {
+      button {
+        margin: auto;
+      }
+    }
+
+    input[type="range"] {
+      width: calc(100% - 40px);
+      margin: auto
+    }
+  }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

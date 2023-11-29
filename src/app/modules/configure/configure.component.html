@@ -1,0 +1,94 @@
+<h2>Configura tu desafío</h2>
+<div class="progress-line">
+  <div class="point" [ngClass]="{'background-point': chosenProduct }"></div>
+  <div class="line"></div>
+
+  <div class="point" [ngClass]="{'background-point': chosenModality }"></div>
+  <div class="line1"></div>
+
+  <div class="point"></div>
+  <div class="line2"></div>
+
+  <div class="point"></div>
+  <div class="line3"></div>
+</div>
+<div>
+
+  <span>ELIGE EL PRODUCTO QUE DESEAS</span>
+  <app-choice-products
+    class="choice-products"
+    [products]="pageContent.choiceProduct.products"
+    (click)="productChoise()"
+  ></app-choice-products>
+
+
+  <span>ELIJE LA MODALIDAD Y BALANCE DE TU DESAFÍO</span>
+  <div class="modality">
+
+    <app-choice-challenge
+      class="choice-challenge"
+      [options]="pageContent.choiceChallenge.options"
+      (click)="modalityChoise()"
+    ></app-choice-challenge>
+
+    <img src="../../../assets/images/line.svg" alt="line">
+
+    <app-data-choice-challenge
+      class="data-choice-challenge"
+    ></app-data-choice-challenge>
+
+  </div>
+
+  <span>ELIGE EL BALANCE DE TU COMPRA</span>
+  <div>
+    <mat-slider  min="0" max="100" step="10"  disableRipple>
+      <input matSliderThumb>
+    </mat-slider>
+
+  </div>
+
+  <span>ELIGE LA MODALIDAD TRADING</span>
+
+  <div class="modality-trading">
+
+    <app-button class="button" >Regular</app-button>
+    <app-button class="button">Swing</app-button>
+
+  </div>
+
+  <div class="amount-pay">
+
+    <div>
+      <span>MONTO A PAGAR</span>
+      <strong>$555</strong>
+    </div>
+
+    <div>
+      <span>Añade tu cupón aquí</span>
+      <app-input text="Escribe tu cupón aquí" custom="modality-configure"></app-input>
+    </div>
+
+  </div>
+
+  <div class="conditional-configure">
+    <div>
+      <app-input type="checkbox"></app-input>
+      <p>
+        Declaro que he leído y estoy de acuerdo con los
+        Términos y Condiciones
+        ,
+        Política de Privacidad
+        y
+        Política de Cookies.
+      </p>
+    </div>
+    <div>
+      <app-input type="checkbox"></app-input>
+      <p>
+        Declaro que he leído y estoy de acuerdo con las Políticas de Cancelación y Reembolso.
+      </p>
+    </div>
+  </div>
+
+  <app-button class="button-buy" text="COMPRAR DESAFÍO" custom="page"></app-button>
+</div>
